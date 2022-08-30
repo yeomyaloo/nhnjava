@@ -1,5 +1,7 @@
 package number;
 
+import class_interface.number.MyRationalNumber;
+
 public class MyNumberTest {
 
 
