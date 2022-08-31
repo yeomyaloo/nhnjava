@@ -2,13 +2,13 @@ package tree.binarysearch;
 
 import java.util.List;
 
-public abstract class Node {
+public abstract class Node<T,K> implements Comparable<K> {
 
-    Integer value;
+    T value;
     Node leftChildNode;
     Node rightChildNode;
 
-    public Node(Integer root){
+    public Node(T root){
         this.value = root;
         this.leftChildNode = null;
         this.rightChildNode = null;
@@ -19,17 +19,20 @@ public abstract class Node {
         this.rightChildNode = rightChildNode;
     }
 
-    public Node(Integer root, Node leftChildNode, Node rightChildNode) {
+    public Node(T root, Node leftChildNode, Node rightChildNode) {
         this.value = root;
         this.leftChildNode = leftChildNode;
         this.rightChildNode = rightChildNode;
     }
 
-    public abstract Integer search(Integer value);
-    public abstract void getList(List<Integer> list);
+    public abstract T search(T value);
+    public abstract void getList(List<T> list);
 
-    public Integer getValue() {
-        return value;
+    public abstract void add(Node node);
+    public abstract void remove(K key);
+
+    public T getValue() {
+        return this.value;
     }
 
     public Node getLeftChildNode() {

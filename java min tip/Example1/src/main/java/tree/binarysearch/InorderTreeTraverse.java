@@ -1,9 +1,10 @@
 package tree.binarysearch;
 
+import java.util.ArrayList;
 import java.util.List;
 
-public class InorderTreeTraverse extends Node{
-    public InorderTreeTraverse(Integer root) {
+public class InorderTreeTraverse<T,K> extends Node<T,K>{
+    public InorderTreeTraverse(T root) {
         super(root,null,null);
     }
 
@@ -11,18 +12,16 @@ public class InorderTreeTraverse extends Node{
         super(leftChildNode, rightChildNode);
     }
 
-    public InorderTreeTraverse(Integer root, InorderTreeTraverse leftChildNode, InorderTreeTraverse rightChildNode) {
+    public InorderTreeTraverse(T root, InorderTreeTraverse leftChildNode, InorderTreeTraverse rightChildNode) {
         super(root, leftChildNode, rightChildNode);
     }
 
 
     @Override
-    public Integer search(Integer key) {
-
-        Integer value = null;
+    public T search(K key) throws Exception{
         if (this.leftChildNode != null){
             try {
-                return this.leftChildNode.search(key);
+                return (T) this.leftChildNode.search(key);
             }catch (Exception e){
 
             }
@@ -34,22 +33,27 @@ public class InorderTreeTraverse extends Node{
             }
         } else if (this.rightChildNode != null) {
             try {
-                return this.rightChildNode.search(key);
+                return (T) this.rightChildNode.search(key);
             } catch (Exception e){
 
             }
         }
-        return value;
+        return new Exception("not found!");
     }
 
-    @Override
-    public void getList(List<Integer> list) {
+    
+    public void getList(List<T> list) {
         if(this.leftChildNode != null) {
             this.leftChildNode.getList(list);
         }
+        list.add(this.value);
+        
+        if(this.rightChildNode != null) {
+            this.rightChildNode.getList(list);
+        }
     }
 
-    public void add(Integer value){
+    public void add(K value){
         if(this.value.compareTo(value) > 0) {
             if(this.leftChildNode != null) {
                 ((InorderTreeTraverse)this.leftChildNode).add(value);
@@ -80,21 +84,45 @@ public class InorderTreeTraverse extends Node{
             node = node.rightChildNode;
             cur = null;
             }
-        else {
-            node = null;
-        }
     }
 
-    public void remove(Integer key) {
+    public void remove(K key) {
         if (this.leftChildNode != null) {
-            try {
-                this.leftChildNode.search(key);
-                if(this.leftChildNode.getLeftChildNode() != null){
+            {
+            this.leftChildNode.search(key);
+            if (this.leftChildNode.getValue().equals(key)) {
+                if (this.leftChildNode.getLeftChildNode() != null) {
+                    Node rightNode = this.leftChildNode.getRightChildNode();
 
                 }
-            } catch (Exception e) {
-                throw new RuntimeException(e);
+                }
             }
+        }
+
+
+    }
+    public String toString() {
+        List<String>  list = new ArrayList<>();
+
+        if ((this.leftChildNode != null) || (this.rightChildNode != null)) {
+            if (this.leftChildNode != null) {
+                list.add(this.leftChildNode.toString());
+            } else {
+                list.add("null");
+            }
+
+            list.add(this.value.toString());
+
+            if (this.rightChildNode != null) {
+                list.add(this.rightChildNode.toString());
+            } else {
+                list.add("null");
+            }
+
+            return  list.toString();
+        }
+        else {
+            return   this.value.toString();
         }
 
     }
