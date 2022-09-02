@@ -12,7 +12,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="datastructure" options="--add-exports java.base/sun.nio.cs=ALL-UNNAMED" />
+      <module name="datastructure" options="" />
     </option>
   </component>
 </project>
