@@ -19,7 +19,7 @@ public class OutputSocket extends Socket {
     public void plug(InputConnector inputConnector){
         // 입력 커넥터와 출력 소켓 연결
 
-        this.inputConnector =
+
 
     }
 

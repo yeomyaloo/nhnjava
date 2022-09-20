@@ -32,7 +32,6 @@ public class InputPort {
     }
 
     public Message get(){
-
         if (messageQueue.isEmpty()){
             throw new NoSuchElementException();
         }

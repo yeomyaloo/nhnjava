@@ -1,14 +1,15 @@
 package simpleFBP2.node;
 
-public class StandardInNode2 extends InputNode2 {
+import java.util.Scanner;
+
+public class StandardInNode2 extends InputNode2{
+    Scanner scanner;
+
     public StandardInNode2(){
-        super(peerInputPorts);
 
     }
-    public StandardInNode2(int count){
-        super(peerInputPorts);
+
+    public StandardInNode2(int count) {
+        super(count);
     }
-
-
-
 }
