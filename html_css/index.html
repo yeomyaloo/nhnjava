@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-size: 20pt;
+        }
+
+        table,th,td{
+            border: 1px double black;
+            width: 800px;
+        }
+
+        .border-red{
+            border: 1px double red;
+            color:  red;
+        }
+
+        .border-blue{
+            border: 1px double blue;
+            color: blue;
+        }
+
+
+    </style>
+</head>
+<body>
+    <table>
+        <caption>제목</caption>
+        <thead>
+            <tr>
+                <td class="border-red">머리부분 가로1</td>
+                <td>머리부분 가로2</td>
+                <td>머리부분 가로3</td>
+
+            </tr>    
+        </thead>
+        <tbody>
+            <tr>
+                <td>몸통부분 가로1</td>
+                <td>몸통부분 가로2</td>
+                <td>몸통부분 가로3</td>
+
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>footer1</td>
+                <td>footer2</td>
+                <td class="border-blue">footer3</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>

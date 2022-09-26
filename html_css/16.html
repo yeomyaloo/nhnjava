@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        p{
+            font-family: Arial, Helvetica, sans-serif;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border: 2px solid rgba(0,0,200,0.6);
+            cursor: pointer;
+            display: inline-block;
+        }
+
+    </style>
+    <link rel="stylesheet" href="./17.sample.css"/>
+
+    <script>
+        function upDateName(){
+            prompt("Enter a new name")
+        }
+        window.addEventListener('DOMContentLoaded', function(){
+            const para = document.querySelector("p");
+            console.log(para);
+            para.addEventListener('click', upDateName);
+        })
+
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <p>head 요소의 내용은 브라우저에 표시되지 않는다.</p>
+    <p>title tag는 제목을 표시한다.</p>
+</body>
+</html>
