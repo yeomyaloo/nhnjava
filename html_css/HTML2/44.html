@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            flex-direction: row; /*해당 요소를 row(가로)로 보이게 한다.*/
+        }
+
+        .child{
+            width: 100px;
+            height: 100px;
+            font-size: 20pt;
+            text-align: center;
+            line-height: 100px;
+        }
+
+        .child:nth-child(1){
+            background-color: skyblue;
+            flex: 2;
+        }
+        
+        .child:nth-child(2){
+            background-color: wheat;
+            flex: 1;
+        }
+        
+        .child:nth-child(3){
+            background-color: greenyellow;
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>nth:childe() 형제 사이에서의 순서에 따라 요소를 선택</h1>
+    <div class="container">
+        <div class="child">flex:2</div>
+        <div class="child">flex:1</div>
+        <div class="child">flex:1</div>
+    </div>
+
+    <h1>Display : Flexible 박스</h1>
+    <p>flex:2? 증가너비(flex-grow), 감소너비(flex-shrink), 기본너비(flex-basic)를 한꺼번에 나타내는 단축 속성</p>
+</body>
+</html>

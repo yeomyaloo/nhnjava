@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            background-color: #ccc;
+            min-height: 20000px;
+        }
+
+        .container{
+            display: flex;
+            flex-direction: row;
+            margin: 30px;
+            padding: 10px;
+            background-color: #fff;
+        }
+
+        .item{
+            position: static;
+            top:10px;
+            left: 10px;
+            width:200px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        .item:nth-child(1){
+            background-color:skyblue ;
+        }        
+        .item:nth-child(2){
+            background-color:yellow ;
+        }
+        .item:nth-child(3){
+            background-color:green ;
+        }
+        
+
+        .target{
+            /* 원래 위치를 기준으로 이동 */
+            position: fixed;
+            top:200px;
+            left: 500px;
+        }
+    </style>
+</head>
+<body>
+    <h1>position:fixed; 해당 위치에 고정( 스크롤바에도 움직임 X)</h1>
+    <div class="container">
+        <div class = "item">1</div>
+        <div class = "item target">2.target</div>
+        <div class = "item">3</div>
+    </div>
+</body>
+</html>

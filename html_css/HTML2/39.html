@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span{
+            margin: 10px;
+            padding: 10px;
+            width:150px;
+            height:150px;
+            font-size: 20pt;
+        }
+
+        .parent{
+            text-align: center;
+        }
+
+
+    </style>
+</head>
+<body>
+
+<!--
+    div 블록 공간 내에서 span들이 공간을 공유 
+    이때 각 inline 범위 내에서 text-align을 쓰면 각자 범위 내에서 그 위치에 있는다.
+-->
+    <h1>inline 레벨 특성</h1>
+    <h2> 여러 요소가 한 행에 있을 수 있다.</h2>
+    <h3> text-align:center 가운데 정렬은 동작한다.</h3>
+    <div class="parent">
+        <span>rookie</span>
+        <span>rookie</span>
+        <span>span은 width, height, margin, top, bottom 동작 안 함</span>
+    </div>
+
+</body>
+</html>

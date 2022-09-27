@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            border: 20px solid #ccc;
+            width: 500px;
+            height: 500px;
+            background-color: green;
+            font-size: 20pt;
+            line-height: 500px;
+            text-align: center;
+        }
+        .box-a{
+            box-sizing: border-box;
+        }
+        .box-b {
+            box-sizing: content-box;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="box box-a">border-box</div>
+    <ul>
+        <li>border-left:20px</li>
+        <li>border-right:20px</li>
+        <li>content = 460px</li>
+        <li><b>total:500px</b></li>
+    </ul>
+    <hr />
+    <h1>box-sizing: content-box</h1>    
+    <div class="box box-b"> content-box</div>
+    <ul>
+        <li>border-left:20px;</li>
+        <li>border-left:20px;</li>
+        <li>content: 500px;</li>
+        <li><b>total:540px;</b></li>
+    </ul>
+
+</body>
+</html>

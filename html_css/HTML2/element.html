@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script language = "JavaScript">
+
+    function test(){
+        var form = document.forms[0];
+        alert(form.animal.value);
+        alert(form.aninal.options[form.animal.selectedIndex].text);
+    }
+    
+
+</script>
+<body>
+
+    <!--get 방식
+        - 단순하게 해당 데이터를 넘기는 것에 사용한다.(변경 X)
+        - form 태그 안에 있는 textarea에 데이터를 담아 submit 해줄 때,
+          url에 해당 데이터가 붙게 된다.
+          파일을 전송하거나 이런 경우엔 post 방식을 사용해 url을 숨길 수 있게 해야한다.
+    -->
+    <h1>Get Method</h1>
+    <form method="get">
+        <textarea name="get" id="" cols="30" rows="10"></textarea>
+        <input type="submit">
+    </form>
+
+
+    <!--post 방식
+        해당 정보를 변경하거나 할 때 사용한다.
+    -->
+    <h1>Post Method</h1> 
+    <form method = "post">
+        <textarea name="post" cols="30" rows="10"></textarea>
+        <input type="submit">
+    </form>
+
+    <h1>Select BOX</h1>
+    <form method="post" name="selectbox_form">
+        <select name="animal" id="animal-select">
+            <option value="">--선택해주세요--</option>
+            <option value="dog">개</option>
+            <option value="cat">고양이</option>
+            <option value="bird">새</option>
+            <option value="fish">물고기</option>
+            <option value="hamster">햄스터</option>
+        </select>
+        <a href="javaScript:test()"><span>확인</span></a>
+    </form>
+    <hr>
+    <h1>&lt;label&gt; 태그</h1>
+    <!--
+        1. input 태그에 레이블을 붙이기 (라벨 - input 태그)
+        2. input 태그를 제어해 상태 값을 변경하도록 돕기
+            2-1 체크 박스만 클릭
+            2-2 텍스트도 클릭 가능
+    -->
+    <form>
+        <label for="animalname">동물 이름</label>
+        <input type="text" id="animalname" />    
+    </form>
+    <hr>
+    <form>
+        <input type="checkbox"/> 랜디 로즈
+    </form>
+    <form>
+        <!--텍스트 클릭에도 checkbox 사용 O-->
+        <label for="randy"><input type="checkbox" id="randy">랜디 로즈</label>
+    </form>
+</body>
+</html>

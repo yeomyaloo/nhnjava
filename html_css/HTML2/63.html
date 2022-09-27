@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container{
+            padding: 10px;
+            outline: solid black;
+            width: 100px;
+            height: 100px
+        }
+        .box{
+            width: 80px;
+            height: 200px;
+        }
+
+        .container_visible{
+            overflow:hidden;
+        }
+
+        .container_scroll{
+
+        }
+
+    </style>
+</head>
+<body>
+    <h1> Overflow: visible; default</h1>
+    <div class="container container_visible">
+        <div class="box">
+            overflow CSS 단축 속성은 요소의 콘텐츠가 너무 커서 요소의 블록 서식 맥락에 맞출 수 없을 때의 처리법을 지정합니다. overflow-x, overflow-y
+        </div>
+    </div>
+    <hr>
+
+    <h1>Overflow:hidden;</h1>
+    <h2>hidden -> 부모 Element를 넘어 가는 값을 잘라 냄</h2>
+    <div class="container container_hidden ">
+        <div class="box">
+            overflow CSS 단축 속성은 요소의 콘텐츠가 너무 커서 요소의 블록 서식 맥락에 맞출 수 없을 때의 처리법을 지정합니다. overflow-x, overflow-y
+        </div>
+    </div>
+
+    <h1>Overflow: scroll: </h1>
+    <h2>가로 세로 스크롤 바를 항상 보여준다.</h2>
+    <div class="container container_scroll">
+        <div class="box">overflow CSS 단축 속성은 요소의 콘텐츠가 너무 커서 요소의 블록 서식 맥락에 맞출 수 없을 때의 처리법을 지정합니다. overflow-x, overflow-y
+        </div>
+    </div>
+    <hr>    
+
+    <h1>Overflow:auto;</h1>
+    <h2>auto -> 내용이 넘치는 경우에만 스크롤바를 보여준다.</h2>
+    
+    <hr>
+    <h1>text-overflow: ellipsis.</h1>
+    <h2>텍스트가 부모 요소를 벗어났을 때 말 줄임 표시를 위해 사용</h2>
+
+    <div class="container container_ellipsis">
+        overflow CSS 단축 속성은 요소의 콘텐츠가 너무 커서 요소의 블록 서식 맥락에 맞출 수 없을 때의 처리법을 지정합니다. overflow-x, overflow-y
+
+    </div>
+
+</body>
+</html>

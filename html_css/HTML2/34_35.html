@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .box{
+            width: 200px;
+            height: 200px;
+            background: #cdefde;
+            border: dotted red 5px;
+        }
+        /*위와 아래 코드가 동일 한 번에 치는지 여부만 다름*/
+        .box{
+            width: 200px;
+            height: 200px;
+            background: #cdefde;
+            border: dotted;
+            border-color: blue;
+            border-width: 5px;
+        }
+
+        .box{
+            width: 200px;
+            height: 200px;
+            background: #cdefde;
+            border-width: 5px;
+            border-color: red;
+        }
+
+        
+    </style>
+</head>
+<body>
+
+    <h1> 여러 방식으로 css 표현하기 </h1>
+    <div class="box"></div>
+</body>
+</html>
