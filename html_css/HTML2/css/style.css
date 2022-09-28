@@ -1,0 +1,172 @@
+.sr-only {
+    position: absolute;
+    z-index: -100;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.resume {
+    width: 600px;
+    margin: 60px auto;
+    padding: 40px;
+    color: #1E1E1E;
+    background-color: #FFF;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+.resume section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 70px;
+}
+
+.resume section:last-child {
+    display: flex;
+    justify-content: end;
+    margin-bottom: 0;
+}
+
+.headline {
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+}
+
+.headline-title {
+    margin-bottom: 5px;
+    font-size: 26px;
+}
+
+.headline-position {
+    margin-bottom: 60px;
+    font-size: 13px;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.headline-image {
+    width: 150px;
+    border: 1px solid #A4A4A4;
+    border-radius: 100%;
+}
+
+.introduce {
+    padding-top: 55px;
+    width: 320px;
+}
+
+.introduce-contact {
+    margin-bottom: 30px;
+}
+
+.introduce-contact::before {
+    content: "";
+    display: block;
+    width: 320px;
+    height: 3px;
+    background-color: #A4A4A4;
+}
+
+.introduce-contact::after {
+    content: "";
+    display: block;
+    width: 320px;
+    height: 1px;
+    background-color: #A4A4A4;
+}
+
+.introduce-contact ul {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    margin: 15px 0;
+}
+
+.introduce-cotact_list {
+    display: flex;
+}
+
+.introduce-cotact_list::before {
+    content: "";
+    display: block;
+    width: 25px;
+    height: 25px;
+    margin: 5px 10px 0 0;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+
+.introduce-cotact_list.phone::before {
+    background-image: url("./assets/telephone.png");
+}
+
+.introduce-cotact_list.email::before {
+    background-image: url("./assets/email.png");
+}
+
+.profile h2 {
+    margin-bottom: 10px;
+}
+
+.part-title {
+    width: 150px;
+    text-align: center;
+}
+
+.part-content {
+    width: 320px;
+}
+
+.part-content_list--title {
+    display: flex;
+    flex-flow: column;
+    width: 80px;
+    margin-right: 50px;
+}
+
+.part-content_list--content {
+    flex: 1;
+    display: flex;
+    flex-flow: column;
+}
+
+.part-content::before {
+    content: "";
+    display: block;
+    width: 320px;
+    height: 1px;
+    margin-bottom: 30px;
+    background-color: #A4A4A4;
+}
+
+.part-content_list {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.part-content_list:last-child {
+    margin-bottom: 0;
+}
+
+.part-content_list--title .date,
+.part-content_list--content .title {
+    margin-bottom: 5px;
+}
+
+.sns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sns-type.github {
+    margin-right: 20px;
+}
+
+.sns-type_image {
+    width: 25px;
+}

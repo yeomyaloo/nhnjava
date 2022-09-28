@@ -1,0 +1,70 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c92986acdf.js" crossorigin="anonymous"></script>
+    <script src="./Calendar.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <!--해당 header 부분-->
+        <header>
+            <section class="header_h1">
+                <h1>Calendar Todo - List</h1>
+            </section>
+            <!--header 부분의 month(월) 선택 부분-->
+                
+            <section class="header_month">
+                <button class="left_btn"><</button>
+                <p class="chooseMonth">해당부분에 선택한 년도와 월이 나옴.</p>
+                <button class="right_btn">></button>
+            </section>
+        </header>
+
+        <!-- -->
+        <main class="main">
+            <section>
+                <div class="main_day">
+                    <ul class="main_day-list clearfixed">
+                        <li>Mon</li>
+                        <li>Tue</li>
+                        <li>Wed</li>
+                        <li>Thu</li>
+                        <li>Fri</li>
+                        <li>Sat</li>
+                        <li>Sun</li>
+                    </ul>
+                </div>
+                <ul class="day clearfix">
+                    <!--해당 부분에 바뀌는 날짜가 들어감-->
+                </ul>
+            </section>
+            <section class="todo">
+                <h1 class="todo-title"> todo list on </h1>
+                <div class="todo-list-edit">
+                    <input type="text" class="todo-list-edit-input">
+                    <button class="todo-list-edit-btn add">add</button>
+                    <button class="todo-list-edit-btn reset">reset</button>
+                    <button class="todo-list-edit-btn allReset">all reset</button>
+                </div>    
+                <ul class="todoList">
+                    <!--해당 부분에 이제 내가 설정한 todo list 목록을 올려줌-->
+                </ul>
+            </section>
+
+        </main>
+        
+
+    </div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+.container{
+    width: 600px;
+    margin: 60px auto;
+    padding: 40px;
+    color: 1e1e1e;
+
+}
+
+.header_month{
+    display: flex;
+    flex-direction: row;
+}
+
+.main{
+
+
+}
+.main .main_day-list{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
