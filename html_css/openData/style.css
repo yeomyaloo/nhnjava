@@ -1,0 +1,19 @@
+.covid_table {
+
+    margin: auto;
+    border: 1px solid black;
+    border-color: black;
+}
+
+td{
+    text-align: center;
+    border: 1px solid black;
+}
+
+.covid_dashboard_head th {
+    border: 1px solid black;
+    width: 300px;
+}
+h1{
+    text-align: center;
+}
