@@ -1,0 +1,31 @@
+
+apply plugin: 'java'
+/*
+plugins{
+    id: 'java'
+}*/
+
+task sum{
+    Random random = new Random()
+
+    int a = random.nextInt(10)
+    int sum = 0
+    for (int i = 1; i <= a ; i++){
+        sum += i
+    }
+    println "random number: ${a}"
+    println "1 ~ ${a} sum result = ${sum}"
+
+}
+
+task hello {
+    println "hello" //메시지 호출 시 괄호 생략이 가능
+}
+
+
+task testList{
+    def list= ['a', 'b', 'c']
+    list[1] = 'B'
+    assert list[1] == 'B'
+}
+
