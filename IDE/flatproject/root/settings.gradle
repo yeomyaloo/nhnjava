@@ -1,0 +1,3 @@
+rootProject.name = 'root'
+
+includeFlat 'child1', 'child2'

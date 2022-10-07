@@ -1,0 +1,51 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+mainClassName = 'com.nhnacademy.Application'
+jar {
+    manifest {
+        attributes 'Main-Class': mainClassName
+    }
+}
+
+
+group 'com.nhnacademy'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    implementation project(':client')
+
+}
+
+test {
+    useJUnitPlatform()
+}
+// 하위 프로젝트 공통 설정
+subprojects {
+    apply plugin: 'java'
+
+    sourceCompatibility = 11
+    targetCompatibility = 11
+}
+
+
+project(':client'){
+    dependencies {
+        implementation project(':server')
+    }
+}
+
+project(':domain'){}
+
+project(':server'){
+    dependencies {
+        implementation project(':domain')
+    }
+}
+

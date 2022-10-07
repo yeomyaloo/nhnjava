@@ -29,3 +29,5 @@ task testList{
     assert list[1] == 'B'
 }
 
+println 'hello build.gradle'
+

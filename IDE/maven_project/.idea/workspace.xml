@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b673fd8e-e122-4b4d-a618-7202221441ab" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../flatproject/chid2/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../flatproject/chid2/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../flatproject/chid2/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../flatproject/chid2/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../flatproject/child/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../flatproject/child/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../flatproject/child/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../flatproject/child/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../flatproject/root/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../flatproject/root/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../flatproject/root/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../flatproject/root/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../multiProject_gradle/maven_project2/src/test/java/MiscTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../multiProject_gradle/maven_project3/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../multiProject_gradle/root/domain1/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../multiProject_gradle/root/domain1/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../multiProject_gradle/root/domain1/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../multiProject_gradle/root/domain1/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../multiProject_gradle/root/domain1/src/main/java/com.nhnacademy.bank.domain1/Account.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../multiProject_gradle/root/domain1/src/main/java/com.nhnacademy.bank.domain1/Money.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../multiProject_gradle/root/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../multiProject_gradle/root/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../multiProject_gradle/root/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../multiProject_gradle/root/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../multiProject_gradle/root/server1/src/main/java/com.nhnacademy.bank.server/Action.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../multiProject_gradle/root/server1/src/main/java/com.nhnacademy.bank.server/RestApi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../multiproject/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../multiproject/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../multiproject/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../multiproject/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gradle_wrapper/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle_wrapper/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gradle_wrapper/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle_wrapper/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sample_gradle/.gradle/7.5.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../sample_gradle/.gradle/7.5.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sample_gradle/.gradle/7.5.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../sample_gradle/.gradle/7.5.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sample_gradle/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../sample_gradle/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sample_gradle/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../sample_gradle/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sample_gradle/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/../sample_gradle/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sample_gradle/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../sample_gradle/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sample_gradle/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/../sample_gradle/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sample_gradle/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../sample_gradle/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../html_css/openData/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../html_css/openData/index.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2FkaEFIxL6jQx61izXqkYgJWqJl" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "jdk.selected.JAVA_MODULE": "11",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "SDKs",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.nhnacademy.Application" />
+      <module name="root" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.nhnacademy.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Application" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b673fd8e-e122-4b4d-a618-7202221441ab" name="Changes" comment="" />
+      <created>1665038421880</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1665038421880</updated>
+      <workItem from="1665038423876" duration="1207000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

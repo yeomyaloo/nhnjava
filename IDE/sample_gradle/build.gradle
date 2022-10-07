@@ -1,6 +1,7 @@
 plugins {
-    id 'java'
+    id 'application'
 }
+mainClassName = 'com.nhnacademy.api.Application'
 
 group 'org.example'
 version '1.0-SNAPSHOT'
@@ -25,4 +26,10 @@ task showRepositories {
 task showProperties {
     println "customProperty:" + customProperty
     println "custom.property:" + project.property('custom.property')
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': mainClassName
+    }
 }

@@ -1,0 +1,2 @@
+rootProject.name = 'root'
+include 'server1', 'client1', 'domain1'

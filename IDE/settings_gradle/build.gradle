@@ -1,0 +1,47 @@
+
+/*
+ doFist / doLast => configure X 이외 나머지는 configure 에서 무조건 실행
+ task 실행 시 doFirst/doLast가 실행
+
+ - settings.gradle에 해놓은 경우엔 모든 경우에 다 실행이 된다.
+ - build의 경우엔 configure 만 실행
+
+ 1. configure 단계 실행 -> 2. task 실행(최소 작업 단위 = task)
+* */
+println 'hello build.gradle'
+
+task hello1 {
+    //doFist & doLast 지정 X -> configure 단계에서 실행
+    println 'hello1'
+}
+
+task hello2 {
+    doLast {
+        println 'hello2 last'
+    }
+}
+
+task hello3{
+    doFirst{
+        println 'hello3 first'
+    }
+
+    doLast{
+        println 'hello3 last'
+    }
+    println 'hello3'
+}
+task task1 {
+    doLast {
+        println 'task1'
+    }
+}
+
+task task2 {
+    doLast {
+        println 'task2'
+    }
+}
+
+task1.mustRunAfter task2
+

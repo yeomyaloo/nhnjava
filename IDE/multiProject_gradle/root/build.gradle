@@ -1,0 +1,47 @@
+plugins {
+    id 'application'
+    //mainClassName = ''
+
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+}
+
+test {
+    useJUnitPlatform()
+}
+subprojects {
+
+    apply plugin: 'java'
+
+    sourceCompatibility = 11
+    targetCompatibility = 11
+}
+
+project(':domain1'){}
+project(':server1'){
+    depenencies{
+        implementation project(':domain1')
+    }
+}
+project(':client1'){
+
+    dependencies {
+        implementation project(':server1')
+    }
+}
+
+//jar {
+//    manifest {
+//        attributes 'Main-Class': mainClassName
+//    }
+//}

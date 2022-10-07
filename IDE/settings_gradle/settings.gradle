@@ -1,0 +1,7 @@
+/*
+    include api 사용 -> 멀티프로젝트 구성 O
+    별다른 사용이 없으면 -> 싱글 프로젝트
+* */
+
+rootProject.name = 'gradleTask'
+println 'hello settings.gradle'
