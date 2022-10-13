@@ -12,3 +12,8 @@ public class SetterInjectionMain {
         service.doSendMessage();
     }
 }
+/*
+new doorayHoock
+
+json 클래스 제공 ~~~
+http 요청 ~ resttemaplate*/

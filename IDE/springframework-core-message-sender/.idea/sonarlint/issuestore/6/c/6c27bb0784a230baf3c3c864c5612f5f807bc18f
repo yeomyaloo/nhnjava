@@ -1,0 +1,8 @@
+
+Q	java:S125"<This block of commented-out lines of code should be removed.(Êë°
+k
+java:S1128"PRemove this unused import 'com.nhnacademy.edu.springframework.greeting.Greeter'.(«ˆŸÓùÿÿÿÿ
+y
+java:S1128"^Remove this unused import 'com.nhnacademy.edu.springframework.greeting.service.KoreanGreeter'.(÷ì¬şÿÿÿÿ
+^
+java:S1128"HRemove this unused import 'org.springframework.context.annotation.Bean'.(‚î‰Ş

@@ -7,9 +7,12 @@
 
   <context:annotation-config />
 
+  <context:property-placeholder location="classpath:greeting.properties" />
+
+
   <bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor" />
 
-  <bean id="koreanGreeter" class="com.nhnacademy.edu.springframework.greeting.service.KoreanGreeter" scope="prototype">
+  <bean id="koreanGreeter" class="com.nhnacademy.edu.springframework.greeting.service.KoreanGreeter" scope="singleton">
   </bean>
 
   <bean id="englishGreeter" class="com.nhnacademy.edu.springframework.greeting.service.EnglishGreeter" scope="prototype" >
@@ -19,4 +22,24 @@
   <bean id="greetingService" class="com.nhnacademy.edu.springframework.greeting.GreetingService" >
   </bean>
 
+
+
+  <!--
+    messageSender 관련 bean 설정
+  -->
+
+  <bean id="smsMessageSender" class="com.nhnacademy.edu.springframework.messagesender.service.SmsMessageSender">
+    <qualifier type="com.nhnacademy.edu.springframework.messagesender.MessageSenderQualifier">
+      <attribute key="senderType" value="SMS"/>
+    </qualifier>
+  </bean>
+  <bean id="emailMessageSender" class="com.nhnacademy.edu.springframework.messagesender.service.EmailMessageSender">
+    <qualifier type="com.nhnacademy.edu.springframework.messagesender.MessageSenderQualifier">
+      <attribute key="senderType" value="EMAIL"/>
+    </qualifier>
+  </bean>
+
+  <bean id="messageSenderService" class="com.nhnacademy.edu.springframework.messagesender.MessageSenderService"></bean>
+
 </beans>
+

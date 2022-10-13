@@ -1,7 +1,10 @@
 package com.nhnacademy.edu.springframework.greeting.service;
 
 import com.nhnacademy.edu.springframework.greeting.Greeter;
+import org.springframework.stereotype.Component;
 
+
+@Component
 public class EnglishGreeter implements Greeter {
 
     public EnglishGreeter() {

@@ -1,5 +1,14 @@
 
-^
-java:S3457"AFormat specifiers should be used instead of string concatenation.(ì¿Ø8¦¢ª¼0
-N	java:S106"9Replace this use of System.out or System.err by a logger.(ì¿Ø
-Z	java:S106"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ8ù»¬ª¼0
+M	java:S106"9Replace this use of System.out or System.err by a logger.(…«”R
+S	java:S106"9Replace this use of System.out or System.err by a logger.(İÃÖıÿÿÿÿ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(şœç”
+W
+java:S3457"AFormat specifiers should be used instead of string concatenation.(ì¿Ø
+U	java:S106"9Replace this use of System.out or System.err by a logger.(ì¿Ø8¯ëÔ¼0
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ8ı¶°ù¼0
+u
+java:S1128"SRemove this unused import 'org.springframework.beans.factory.annotation.Autowired'.(¡¸Îùÿÿÿÿ8–ÜÖ€½0
+u
+java:S1128"SRemove this unused import 'org.springframework.beans.factory.annotation.Qualifier'.(íàÄ®ıÿÿÿÿ8–ÜÖ€½0
+h
+java:S1128"KRemove this unused import 'org.springframework.context.annotation.Primary'.(“ğ›ß8£ÜÖ€½0

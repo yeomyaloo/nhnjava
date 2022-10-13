@@ -1,0 +1,14 @@
+
+V	java:S125"<This block of commented-out lines of code should be removed.(±‘…øÿÿÿÿ
+}
+java:S1128"[Remove this unused import 'com.nhnacademy.edu.springframework.messagesender.MessageSender'.(»µÇÊşÿÿÿÿ8åËü¼0
+„
+java:S1128"bRemove this unused import 'com.nhnacademy.edu.springframework.messagesender.MessageSenderService'.(©Ò­ÿÿÿÿÿ8æËü¼0
+Š
+java:S1128"hRemove this unused import 'com.nhnacademy.edu.springframework.messagesender.service.EmailMessageSender'.(¤Ğø£şÿÿÿÿ8æËü¼0
+ƒ
+java:S1128"fRemove this unused import 'com.nhnacademy.edu.springframework.messagesender.service.SmsMessageSender'.(ÙÃµ£8æËü¼0
+e
+java:S1128"HRemove this unused import 'org.springframework.context.annotation.Bean'.(‚î‰Ş8çËü¼0
+t
+java:S1128"RRemove this unused import 'org.springframework.context.annotation.ImportResource'.(ûêÍ‚ÿÿÿÿÿ8ë×ëù¼0

@@ -1,34 +1,42 @@
 package com.nhnacademy.edu.springframework.messagesender;
 
+import com.nhnacademy.edu.springframework.greeting2.Greeter;
 import com.nhnacademy.edu.springframework.messagesender.service.SmsMessageSender;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 
+
+@Component
 public class MessageSenderService {
 
+    private MessageSender messageSender;
+/*
 
-    private MessageSender smsmessageSender;
-    private MessageSender emailMessageSender;
+    @Value("${from}")
+    private String name;
+*/
 
 
-    public MessageSenderService() {
+    public void setMessageSender(
+        MessageSender messageSender) {
+        this.messageSender = messageSender;
+    }
+
+    @Autowired
+    public MessageSenderService(MessageSender doorayMessageSender) {
+        System.out.println("-----------------Constructor Injection--------------------");
+        this.messageSender = doorayMessageSender;
     }
 
 
-    public void setSmsMessageSender(MessageSender smsmessageSender) {
-        this.smsmessageSender = smsmessageSender;
-    }
 
-    public void setEmailMessageSender(MessageSender emailMessageSender) {
-        this.emailMessageSender = emailMessageSender;
-    }
+    public boolean sendMessage(){
 
-    public MessageSenderService(MessageSender smsmessageSender,MessageSender emailMessageSender) {
-        this.smsmessageSender = smsmessageSender;
-        this.emailMessageSender = emailMessageSender;
-
+        return true;
     }
 
     public void doSendMessage() {
-        smsmessageSender.sendMessage(new User("dad","dadasd"), "10101");
-        emailMessageSender.sendMessage(new User("dad","dadasd"), "10101");
+        messageSender.sendMessage(new User("dad","dadasd"), "10101");
     }
 }

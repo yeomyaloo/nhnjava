@@ -1,0 +1,9 @@
+
+Q	java:S125"<This block of commented-out lines of code should be removed.(Ë¥¼
+N	java:S106"9Replace this use of System.out or System.err by a logger.(îéÉ£
+s
+java:S1128"QRemove this unused import 'com.nhnacademy.edu.springframework.greeting2.Greeter'.(Ù±êçıÿÿÿÿ8«»Ó€½0
+ƒ
+java:S1128"fRemove this unused import 'com.nhnacademy.edu.springframework.messagesender.service.SmsMessageSender'.(ÙÃµ£8«»Ó€½0
+l
+java:S1128"ORemove this unused import 'org.springframework.beans.factory.annotation.Value'.(ìø›8«»Ó€½0
