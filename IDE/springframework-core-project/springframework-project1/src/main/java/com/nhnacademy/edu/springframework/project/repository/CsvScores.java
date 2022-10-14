@@ -17,7 +17,7 @@ public class CsvScores implements Scores {
     static CsvScores instance;
 
 
-    Map<Character, Character> map = new HashMap<>();
+    Map<String , String> map = new HashMap<>();
 
     //생성자를 private로 만들어 접근을 막음
     private CsvScores(){}
@@ -46,15 +46,14 @@ public class CsvScores implements Scores {
 
 
                 String[] word = line.split(",");
-                (char )word.
+                map.put(word[0],word[1]);
+
             }
         }
     }
 
     @Override
     public List<Score> findAll() {
-
-
 
 
 
