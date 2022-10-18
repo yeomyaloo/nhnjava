@@ -8,7 +8,7 @@ import java.util.Collection;
 public interface Students {
     void load() throws IOException;
 
-    Collection<Student> findAll();
+    Collection<Student> findAll() throws IOException;
 
     void merge(Collection<Score> scores);
 }

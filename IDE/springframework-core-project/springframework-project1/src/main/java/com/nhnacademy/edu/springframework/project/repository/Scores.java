@@ -8,5 +8,5 @@ public interface Scores {
 
 
 
-    List<Score> findAll();
+    List<Score> findAll() throws IOException;
 }

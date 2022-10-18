@@ -4,12 +4,10 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.stream.Collectors;
 import org.springframework.core.io.FileSystemResource;
 
 public class CsvScores implements Scores {
@@ -17,7 +15,13 @@ public class CsvScores implements Scores {
     static CsvScores instance;
 
 
-    Map<String , String> map = new HashMap<>();
+
+    /**
+     * 1. findAll()
+     * 해당 학생 객체를 List로 넣어준다.
+     * */
+
+    static Map<Integer, Integer> map;
 
     //생성자를 private로 만들어 접근을 막음
     private CsvScores(){}
@@ -38,25 +42,52 @@ public class CsvScores implements Scores {
     @Override
     public void load() throws IOException {
 
+        map = new HashMap<>();
         try (InputStream inputStream = new FileSystemResource("C:\\Users\\yeomyalooo\\Documents\\GitHub\\nhnjava\\IDE\\springframework-core-project\\springframework-project1\\src\\main\\resources\\data\\score.csv").getInputStream();
             BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
         ) {
             String line;
             while((line = reader.readLine()) != null) {
-
-
                 String[] word = line.split(",");
-                map.put(word[0],word[1]);
+
+                map.put(Integer.parseInt(word[0]),Integer.parseInt(word[1]));
 
             }
+            System.out.println(map);
         }
     }
 
+/*    public static void main(String[] args) throws IOException {
+        Scores instance1 = CsvScores.getInstance();
+        instance1.load();
+
+        instance1.findAll();
+
+
+    }*/
+
     @Override
-    public List<Score> findAll() {
+    public List<Score> findAll() throws IOException {
+        //load data - list / ... etc
+        List<Score> scoreAList = new ArrayList<>();
 
+        Scores instance = CsvScores.getInstance();
 
+        instance.load();
+        
+/*        for(Map.Entry<Integer, Integer> entry: map.entrySet()){
+            Integer intKey = entry.getKey();
+            Integer intValue = entry.getValue();
 
-        return null;
+            System.out.println(intKey+":"+intValue);
+        }*/
+
+        map.forEach((intKey, intValue) -> {
+            scoreAList.add(new Score(intKey, intValue));
+        });
+
+        System.out.println(scoreAList);
+
+        return scoreAList;
     }
 }
