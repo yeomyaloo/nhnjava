@@ -1,5 +1,6 @@
 package com.nhnacademy.edu.springframework.project.service;
 
+import com.nhnacademy.edu.springframework.project.AOP.TestAnnotation;
 import com.nhnacademy.edu.springframework.project.repository.CsvScores;
 import com.nhnacademy.edu.springframework.project.repository.CsvStudents;
 import com.nhnacademy.edu.springframework.project.repository.Score;
@@ -10,10 +11,13 @@ import java.io.IOException;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
+import org.springframework.stereotype.Service;
 
+@Service
 public class DefaultGradeQueryService implements GradeQueryService {
 
     @Override
+    @TestAnnotation
     public List<Score> getScoreByStudentName(String name) throws IOException {
         //
         // TODO 5: 학생 이름으로 점수를 반환합니다. 동명이인 고려합니다.
@@ -37,6 +41,7 @@ public class DefaultGradeQueryService implements GradeQueryService {
     }
 
     @Override
+    @TestAnnotation
     public Score getScoreByStudentSeq(int seq) throws IOException {
         // TODO 6 : 학번으로 점수를 반환합니다. seq 인자가 학번입니다.
 

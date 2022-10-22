@@ -10,5 +10,5 @@ public interface Students {
 
     Collection<Student> findAll() throws IOException;
 
-    void merge(Collection<Score> scores);
+    void merge(Collection<Score> scores) throws IOException;
 }

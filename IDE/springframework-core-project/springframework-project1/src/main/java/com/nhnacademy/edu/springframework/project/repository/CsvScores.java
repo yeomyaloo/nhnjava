@@ -1,5 +1,6 @@
 package com.nhnacademy.edu.springframework.project.repository;
 
+import com.nhnacademy.edu.springframework.project.AOP.TestAnnotation;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -8,11 +9,17 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.FileSystemResource;
+import org.springframework.stereotype.Component;
 
+
+@Component
 public class CsvScores implements Scores {
 
-    static CsvScores instance;
+
+    @Autowired
+    private static CsvScores instance = new CsvScores();
 
 
 
@@ -38,6 +45,7 @@ public class CsvScores implements Scores {
 
 
 
+    @TestAnnotation
     // TODO 5 : score.csv 파일에서 데이터를 읽어 멤버 변수에 추가하는 로직을 구현하세요.
     @Override
     public void load() throws IOException {
@@ -53,18 +61,11 @@ public class CsvScores implements Scores {
                 map.put(Integer.parseInt(word[0]),Integer.parseInt(word[1]));
 
             }
-            System.out.println(map);
         }
     }
 
-/*    public static void main(String[] args) throws IOException {
-        Scores instance1 = CsvScores.getInstance();
-        instance1.load();
 
-        instance1.findAll();
-
-
-    }*/
+    @TestAnnotation
 
     @Override
     public List<Score> findAll() throws IOException {

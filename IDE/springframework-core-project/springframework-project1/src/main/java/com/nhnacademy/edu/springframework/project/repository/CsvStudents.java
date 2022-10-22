@@ -1,5 +1,6 @@
 package com.nhnacademy.edu.springframework.project.repository;
 
+import com.nhnacademy.edu.springframework.project.AOP.TestAnnotation;
 import com.nhnacademy.edu.springframework.project.service.Student;
 
 import java.io.BufferedReader;
@@ -11,18 +12,27 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
 import org.springframework.core.io.FileSystemResource;
+import org.springframework.stereotype.Component;
 
 
+@Component
 public class CsvStudents implements Students {
 
-    static CsvStudents instance;
+    @Autowired
+    private static CsvStudents instance = new CsvStudents();
 
 
     Map<Integer, String> map;
 
 
-    private CsvStudents(){}
+    private CsvStudents(){
+
+    }
 
     /** TODO 3 :
      * Java Singleton 패턴으로 getInstance() 를 구현하세요.
@@ -37,6 +47,7 @@ public class CsvStudents implements Students {
     // TODO 7 : student.csv 파일에서 데이터를 읽어 클래스 멤버 변수에 추가하는 로직을 구현하세요.
     // 데이터를 적재하고 읽기 위해서, 적절한 자료구조를 사용하세요.
     @Override
+    @TestAnnotation
     public void load() throws IOException {
 
 
@@ -55,11 +66,7 @@ public class CsvStudents implements Students {
         System.out.println(map);
     }
 
-    public static void main(String[] args) throws IOException {
-        Students students = CsvStudents.getInstance();
 
-        students.load();
-    }
 
 
     /**
@@ -73,18 +80,19 @@ public class CsvStudents implements Students {
      * */
 
     @Override
+    @TestAnnotation
     public Collection<Student> findAll() throws IOException {
 
         List<Student> studentList = new ArrayList<>();
 
-
         instance.load();
 
         map.forEach((key, value)->{
-            studentList.add(new Student());
+            studentList.add(new Student(key,value));
         });
-        return null;
 
+
+        return studentList;
     }
 
     /**
@@ -92,11 +100,15 @@ public class CsvStudents implements Students {
      * @param scores
      */
     @Override
-    public void merge(Collection<Score> scores) {
+    @TestAnnotation
+    public void merge(Collection<Score> scores) throws IOException {
+        Students students = CsvStudents.getInstance();
 
-
-        //scores.forEach();
+        List<Object> mergedList = Stream.of(students.findAll(),scores)
+                            .flatMap(Collection::stream)
+                            .collect(Collectors.toList());
 
 
     }
+
 }

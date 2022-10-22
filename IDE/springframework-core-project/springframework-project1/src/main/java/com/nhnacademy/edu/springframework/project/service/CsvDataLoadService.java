@@ -1,5 +1,6 @@
 package com.nhnacademy.edu.springframework.project.service;
 
+import com.nhnacademy.edu.springframework.project.AOP.TestAnnotation;
 import com.nhnacademy.edu.springframework.project.repository.CsvScores;
 import com.nhnacademy.edu.springframework.project.repository.CsvStudents;
 import com.nhnacademy.edu.springframework.project.repository.Scores;
@@ -8,6 +9,7 @@ import java.io.IOException;
 
 public class CsvDataLoadService implements DataLoadService {
     @Override
+    @TestAnnotation
     public void loadAndMerge() throws IOException {
         Scores scores = CsvScores.getInstance();
         scores.load();
