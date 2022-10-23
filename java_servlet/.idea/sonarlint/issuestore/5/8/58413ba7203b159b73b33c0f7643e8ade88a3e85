@@ -1,0 +1,11 @@
+
+—
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(þ™â©
+œ
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ñšãåýÿÿÿÿ
+p
+java:S1450"URemove the "basket" field and declare it as a local variable in the relevant methods.(ó“ÃÖùÿÿÿÿ
+@
+java:S1068"+Remove this unused "buyList" private field.(ì×–k
+E
+java:S1068"*Remove this unused "basket" private field.(ó“ÃÖùÿÿÿÿ
