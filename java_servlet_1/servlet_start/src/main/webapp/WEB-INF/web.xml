@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+  version="4.0">
+
+
+  <servlet>
+    <servlet-name>testServlet</servlet-name>
+    <servlet-class>com.nhnacademy.servlet.servlet_start.TestServlet</servlet-class>
+  </servlet>
+
+
+  <!-- /test 라는 url로 받으면 해당 servlet이 작동하겠다 ~ -->
+  <servlet-mapping>
+    <servlet-name>testServlet</servlet-name>
+    <url-pattern>/test</url-pattern>
+  </servlet-mapping>
+
+  <!--
+      load-on-startup?
+  -->
+  <servlet>
+    <servlet-name>nowServlet</servlet-name>
+    <servlet-class>com.nhnacademy.servlet.servlet_start.NowServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>nowServlet</servlet-name>
+    <url-pattern>/now</url-pattern>
+  </servlet-mapping>
+
+
+</web-app>

@@ -1,6 +1,8 @@
 package exercise;
 
 import exercise.BuyList.Item;
+import java.util.Arrays;
+import java.util.Map;
 import java.util.Scanner;
 
 class NhnMartShell {
@@ -26,9 +28,28 @@ class NhnMartShell {
 //        buyList.add(new BuyList.Item("계란", 3));
 
         Scanner sc = new Scanner(System.in);
-
         BuyList buyList = new BuyList();
-        buyList.add(new Item(sc.nextLine(), sc.nextInt()));
+
+
+        String buying = sc.nextLine();
+        String[] list = null;
+
+        int[] stockNum = new int[100];
+        String[] kind = new String[100];
+
+        list = buying.split(" ");
+
+        for (int i = 0; i < list.length; i++){
+            if (i % 2 != 0){
+                stockNum[i] = Integer.parseInt(list[i]);
+            }else {
+                kind[i] = list[i];
+            }
+        }
+
+        for (int i = 0; i < stockNum.length; i++) {
+            buyList.add(new BuyList.Item(kind[i], stockNum[i]));
+        }
 
         // TODO
         return buyList;
@@ -37,6 +58,10 @@ class NhnMartShell {
 
 public class NhnMart {
     private final FoodStand foodStand = new FoodStand();
+
+
+    private final Counter counter = new Counter();
+
 
     public void prepareMart() {
         fillFoodStand();
@@ -61,12 +86,12 @@ public class NhnMart {
         return new Basket();
     }
 
-    public Object getFoodStand() {
+    public FoodStand getFoodStand() {
         return foodStand;
     }
 
 
-    public Object getCounter() {
-        return provideBasket();
+    public Counter getCounter() {
+        return counter;
     }
 }
