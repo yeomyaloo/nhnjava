@@ -1,0 +1,5 @@
+com\nhnacademy\servlet\Main.class
+com\nhnacademy\repository\FoodRepositoryImp.class
+com\nhnacademy\domain\Food.class
+com\nhnacademy\repository\FoodRepository.class
+com\nhnacademy\servlet\InitServlet.class

@@ -1,0 +1,15 @@
+
+
+java:S1989"dHandle the following exceptions that could be thrown by "readCookie": ServletException, IOException.(žçö‘ùÿÿÿÿ
+{
+java:S1989"eHandle the following exceptions that could be thrown by "writeCookie": ServletException, IOException.(…Âª±
+y
+java:S1989"^Handle the following exceptions that could be thrown by "show": ServletException, IOException.(±Ñþˆýÿÿÿÿ
+Œ
+java:S1130"wRemove the declaration of thrown exception 'javax.servlet.ServletException', as it cannot be thrown from method's body.(ýù±
+@
+java:S1172"*Remove this unused method parameter "req".(º™™™
+Œ
+java:S11307"wRemove the declaration of thrown exception 'javax.servlet.ServletException', as it cannot be thrown from method's body.(ýù±
+W
+java:S1075?"ARefactor your code to get this URI from a customizable parameter.(˜§÷æ

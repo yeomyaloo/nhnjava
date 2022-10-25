@@ -119,28 +119,25 @@
 
   <servlet>
     <servlet-name>loginServlet</servlet-name>
-    <servlet-class>com.nhnacademy.sevlet.LoginServlet</servlet-class>
+    <servlet-class>com.nhnacademy.sevlet2.LoginServlet</servlet-class>
     <init-param>
       <param-name>id</param-name>
-      <param-value>idid</param-value>
+      <param-value>dongmyo</param-value>
     </init-param>
     <init-param>
       <param-name>pwd</param-name>
-      <param-value>1234</param-value>
+      <param-value>12345</param-value>
     </init-param>
   </servlet>
-
 
   <servlet-mapping>
     <servlet-name>loginServlet</servlet-name>
     <url-pattern>/login</url-pattern>
-
   </servlet-mapping>
-
 
   <servlet>
     <servlet-name>logoutServlet</servlet-name>
-    <servlet-class>com.nhnacademy.sevlet.LogoutServlet</servlet-class>
+    <servlet-class>com.nhnacademy.sevlet2.LogoutServlet</servlet-class>
   </servlet>
 
   <servlet-mapping>
@@ -148,4 +145,74 @@
     <url-pattern>/logout</url-pattern>
   </servlet-mapping>
 
+  <filter>
+    <filter-name>characterEncodingFilter</filter-name>
+    <filter-class>com.nhnacademy.sevlet.CharacterEncodingFilter</filter-class>
+    <init-param>
+      <param-name>encoding</param-name>
+      <param-value>UTF-8</param-value>
+    </init-param>
+  </filter>
+
+  <filter-mapping>
+    <filter-name>characterEncodingFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+
+  <filter>
+    <filter-name>loginCheckFilter</filter-name>
+    <filter-class>com.nhnacademy.sevlet2.LoginCheckFilter</filter-class>
+    <init-param>
+      <param-name>exclude-urls</param-name>
+      <param-value>/login.html
+                    /login
+                    /loginForm
+      </param-value>
+    </init-param>
+
+  </filter>
+
+  <filter-mapping>
+    <filter-name>loginCheckFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+
+
+  <!--방문수 카운터 재구현
+      서버 종료에도 해당 값을 그대로 가지고 갈 수 있도로록
+   -->
+  <context-param>
+    <param-name>counterFileName</param-name>
+    <param-value>counter.dat</param-value>
+  </context-param>
+
+
+
+  <filter>
+    <filter-name>counterFilter</filter-name>
+    <filter-class>com.nhnacademy.sevlet2.CounterFilter</filter-class>
+  </filter>
+
+  <filter-mapping>
+    <filter-name>counterFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+
+  <listener>
+    <listener-class>com.nhnacademy.sevlet2.WebAppListener</listener-class>
+  </listener>
+  <listener>
+    <listener-class>com.nhnacademy.sevlet2.SessionListener</listener-class>
+  </listener>
+
+
+  <servlet>
+    <servlet-name>fileUploadServlet</servlet-name>
+    <servlet-class>com.nhnacademy.sevlet2.FileUploadServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>fileUploadServlet</servlet-name>
+    <url-pattern>/upload</url-pattern>
+  </servlet-mapping>
 </web-app>

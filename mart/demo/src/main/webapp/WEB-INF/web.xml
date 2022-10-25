@@ -6,21 +6,29 @@
 
 
 
-  <servlet>
-    <servlet-name>foodStandServlet</servlet-name>
-    <servlet-class>com.nhnacademy.servlet.demo.servlet.FoodStandServlet</servlet-class>
-  </servlet>
-
-  <servlet-mapping>
-    <servlet-name>foodStandServlet</servlet-name>
-    <url-pattern>/init</url-pattern>
-  </servlet-mapping>
-
+  <context-param>
+    <param-name>onion</param-name>
+    <param-value>1000</param-value>
+  </context-param>
 
   <context-param>
-    <param-name>foodName</param-name>
-    <param-value>10</param-value>
+    <param-name>egg</param-name>
+    <param-value>2000</param-value>
   </context-param>
+
+  <context-param>
+    <param-name>greenOnion</param-name>
+    <param-value>500</param-value>
+  </context-param>
+
+  <context-param>
+    <param-name>apple</param-name>
+    <param-value>2000</param-value>
+  </context-param>
+
+
+  <welcome-file-list>index.html</welcome-file-list>
+
 
 
 
