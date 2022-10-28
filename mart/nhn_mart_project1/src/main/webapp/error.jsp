@@ -11,6 +11,7 @@
     <title>error</title>
 </head>
 <body>
+${exception}
 
 </body>
 </html>

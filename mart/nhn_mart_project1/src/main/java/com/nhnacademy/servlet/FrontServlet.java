@@ -1,8 +1,7 @@
 package com.nhnacademy.servlet;
 
-import com.nhnacademy.controller.Command;
-import com.nhnacademy.controller.LoginOkFormController;
-import com.nhnacademy.controller.LoginPostController;
+import com.nhnacademy.controller.*;
+import lombok.extern.slf4j.Slf4j;
 
 import java.io.IOException;
 import javax.servlet.RequestDispatcher;
@@ -12,6 +11,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+
+@Slf4j
 @WebServlet(name = "frontServlet", urlPatterns = "*.do")
 public class FrontServlet extends HttpServlet {
     private static final String REDIRECT_PREFIX = "redirect:";
@@ -26,6 +27,7 @@ public class FrontServlet extends HttpServlet {
         try {
             Command command  = resolveCommand(req.getServletPath(), req.getMethod());
             String view = command.execute(req, resp);
+            log.info(view);
             if (view.startsWith(REDIRECT_PREFIX)) {
                 // redirect:로 시작하면 redirect 처리.
                 resp.sendRedirect(view.substring(REDIRECT_PREFIX.length()));
@@ -37,6 +39,9 @@ public class FrontServlet extends HttpServlet {
             // 에러가 발생한 경우는 error page로 지정된 /error.jsp에게 view 처리를 위임.
 
             req.setAttribute("exception", ex);
+
+            log.error("",ex);
+
             RequestDispatcher rd = req.getRequestDispatcher("/error.jsp");
             rd.forward(req, resp);
         }
@@ -46,11 +51,21 @@ public class FrontServlet extends HttpServlet {
         Command command = null;
 
         if ("/login.do".equals(servletPath) && "POST".equalsIgnoreCase(method)) {
-            command = new LoginPostController("admin", "12345");
+            command = new LoginPostController("hi", "123");
 
-        }else if("/login_ok.do".equals(servletPath) && "GET".equalsIgnoreCase(method)){
+        } else if("/login_ok.do".equals(servletPath) && "GET".equalsIgnoreCase(method)){
             command = new LoginOkFormController();
+        } else if("/logout.do".equals(servletPath) && "POST".equalsIgnoreCase(method)){
+            command = new LogoutPostController();
+        } else if("/find_user.do".equals(servletPath) && "GET".equalsIgnoreCase(method)){
+            command = new UserListFormController();
+        } else if("/create_user.do".equals(servletPath) && "GET".equalsIgnoreCase(method)){
+            command = new UserCreateFormController();
+        } else if("/create_user.do".equals(servletPath) && "POST".equalsIgnoreCase(method)){
+            command = new UserCreatePostController();
         }
+
+
 
 //        } else if ("/cart.do".equals(servletPath) && "POST".equalsIgnoreCase(method)) {
 //            command = new CartUpdateController();

@@ -1,5 +1,7 @@
 package com.nhnacademy.controller;
 
+import com.nhnacademy.domain.User;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -26,22 +28,31 @@ public class LoginPostController implements Command {
 
         if (id != null && pwd != null && idInitParam.equals(id) && pwdInitParam.equals(pwd)) {
             HttpSession session = req.getSession();
-            session.setAttribute("id", id);
+//
+//            User user = new User(id, pwd, " ");
+//            session.setAttribute("id", user);
 
+            session.setAttribute("role", "USER");
+            session.setAttribute("id", id);
             session.setAttribute("is_login_fail","user_ok");
             return "login_ok.do";
 
-        } else if (id != null && pwd != null && idInitParam.equals("admin") && pwdInitParam.equals("12345")) {
+        } else if (id != null && pwd != null && id.equals("admin") && pwd.equals("12345")) {
             HttpSession session = req.getSession();
-            session.setAttribute("id", id);
+
+//            User user = new User("admin","12345","ADMIN");
+//            session.setAttribute("id", user);
+
+            session.setAttribute("role", "ADMIN");
+            session.setAttribute("id", "관리자");
             session.setAttribute("is_login_fail", "admin_ok");
 
             return "login_ok.do";
         }else {
             req.getSession().setAttribute("is_login_fail", "fail");
+            return "index.jsp";
         }
 
-        return "/login.do";
     }
 
 

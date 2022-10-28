@@ -18,24 +18,30 @@
 
   <style>
     .login_form{
+
+      align-content: center;
       width: 300px;
       height: 300px;
       padding: 20px;
       border: 1px solid gray;
+      text-align: center;
     }
   </style>
   <body>
   <h1> 게시판 사이트 </h1>
 
-  <form class="login_form" action="/login.do" method="post">
-    <label>아이디 : </label><input type="text" name="id"></br>
-    <label>비밀번호 : </label><input type="password" name="pwd">
-    </br> <button type="submit">로그인</button>
-  </form>
-  <c if: dff
-
-
-
+  <div class="login_form">
+    <form action="/login.do" method="post">
+      <label>아이디 : </label><input type="text" name="id"></br>
+      <label>비밀번호 : </label><input type="password" name="pwd">
+      </br> <button type="submit">로그인</button>
+    </form>
+    <c:choose>
+      <c:when test="${is_login_fail eq \"fail\"}">
+    <div style="color: red"> 잘못된 사용자 정보를 입력하셨습니다. </br> 다시 입력해주세요. </div>
+      </c:when>
+    </c:choose>
+  </div>
 
 
   </body>

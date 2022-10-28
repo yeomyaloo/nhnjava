@@ -9,6 +9,8 @@ import java.util.List;
 public class ArrayUserRepository implements UserRepository {
     List<User> list = new ArrayList<>();
 
+
+
     @Override
     public void add(User user) {
         list.add(user);
