@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 
-@Slf4j
+
 @WebServlet(name = "frontServlet", urlPatterns = "*.do")
 public class FrontServlet extends HttpServlet {
     private static final String REDIRECT_PREFIX = "redirect:";
@@ -27,7 +27,6 @@ public class FrontServlet extends HttpServlet {
         try {
             Command command  = resolveCommand(req.getServletPath(), req.getMethod());
             String view = command.execute(req, resp);
-            log.info(view);
             if (view.startsWith(REDIRECT_PREFIX)) {
                 // redirect:로 시작하면 redirect 처리.
                 resp.sendRedirect(view.substring(REDIRECT_PREFIX.length()));
@@ -39,8 +38,6 @@ public class FrontServlet extends HttpServlet {
             // 에러가 발생한 경우는 error page로 지정된 /error.jsp에게 view 처리를 위임.
 
             req.setAttribute("exception", ex);
-
-            log.error("",ex);
 
             RequestDispatcher rd = req.getRequestDispatcher("/error.jsp");
             rd.forward(req, resp);

@@ -39,7 +39,9 @@
             <td> 회원 아이디 </td><td> 회원명 </td><td> 프로필 사진 </td>
         </tr>
         <%
-            UserRepository userRepository = (UserRepository) request.getSession().getAttribute("userRepository");
+
+            ServletContext servletContext = request.getSession().getServletContext();
+            UserRepository userRepository = (UserRepository) servletContext.getAttribute("userRepository");
             if (Objects.nonNull(userRepository)){
                 for (int i = 0; i < userRepository.getUsers().size(); i++){
         %>

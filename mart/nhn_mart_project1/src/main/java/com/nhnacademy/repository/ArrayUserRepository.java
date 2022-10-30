@@ -7,9 +7,16 @@ import java.util.Iterator;
 import java.util.List;
 
 public class ArrayUserRepository implements UserRepository {
-    List<User> list = new ArrayList<>();
+//    private static UserRepository userRepository = new ArrayUserRepository();
+//    public ArrayUserRepository() {
+//
+//    }
+//    public static UserRepository getInstance(){
+//        return userRepository;
+//    }
 
 
+    public List<User> list = new ArrayList<>();
 
     @Override
     public void add(User user) {
@@ -31,15 +38,16 @@ public class ArrayUserRepository implements UserRepository {
 
     @Override
     public User remove(String id) {
-        Iterator iterator = list.iterator();
-
-        while (iterator.hasNext()){
-            User user = (User) iterator.next();
-            if (user.getId().equals("id")){
-                return user = null;
+        User delUser = null;
+        for(User user : list){
+            if (user.getId().equals(id)){
+                delUser = user;
+                list.remove(user);
+            } else {
+                System.out.println("삭제하고자 하는 사용자를 찾을 수 없습니다.");
             }
         }
-        return null;
+        return delUser;
     }
 
     @Override

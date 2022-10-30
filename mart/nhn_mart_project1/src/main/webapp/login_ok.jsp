@@ -29,7 +29,6 @@
 
             <a href="/find_user.do"> 회원 조회하기 </a></br>
             <a href="/create_user.do"> 회원 생성하기 </a>
-            ${userRepository}
             <form action="/logout.do" method="post">
                 <button type="submit" name="logout">로그아웃 하기</button>
             </form>
