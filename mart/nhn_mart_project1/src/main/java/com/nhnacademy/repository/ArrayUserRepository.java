@@ -28,12 +28,16 @@ public class ArrayUserRepository implements UserRepository {
         /**
          * 현재 객체를 가져와서 바꾸고자 하는 객체로 setter 사용해서 고쳐줌
          * */
-        if(getUser(user.getId()) != null) {
-            User currentUser = getUser(user.getId());
-            currentUser.setId(user.getId());
-            currentUser.setName(user.getName());
-            currentUser.setPassword(user.getPassword());
+
+        for(User users : list){
+            if (users.getId().equals(user.getId())){
+                users.setId(user.getId());
+                users.setPassword(user.getPassword());
+                users.setName(user.getName());
+                users.setProfileFileName(user.getProfileFileName());
+            }
         }
+
     }
 
     @Override

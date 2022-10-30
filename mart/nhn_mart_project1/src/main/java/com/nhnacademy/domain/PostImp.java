@@ -21,13 +21,12 @@ public class PostImp implements Post{
     int viewCnt;
 
 
-    public PostImp(long boardId, String title, String content, String id, LocalDateTime create_post, int viewCnt) {
+    public PostImp(long boardId, String title, String content, String id, LocalDateTime create_post) {
         this.boardId = boardId;
         this.title = title;
         this.content = content;
         this.id = id;
         this.create_post = create_post;
-        this.viewCnt = viewCnt;
     }
 
     @Override

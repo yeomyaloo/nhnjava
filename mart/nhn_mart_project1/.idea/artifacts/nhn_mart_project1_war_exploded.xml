@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" name="nhn_mart_project1:war exploded">
-    <output-path>$PROJECT_DIR$/target/nhn_mart_project1-1.0-SNAPSHOT</output-path>
+    <output-path>$PROJECT_DIR$/target/excercise-1.0-SN APSHOT</output-path>
     <properties id="maven-jee-properties">
       <options>
         <exploded>true</exploded>
@@ -15,61 +15,17 @@
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="Maven: org.projectlombok:lombok:1.18.24" />
-          <element id="library" level="project" name="Maven: org.apache.tomcat.embed:tomcat-embed-core:9.0.60" />
-          <element id="library" level="project" name="Maven: org.apache.tomcat:tomcat-annotations-api:9.0.60" />
-          <element id="library" level="project" name="Maven: jakarta.servlet:jakarta.servlet-api:4.0.4" />
-          <element id="library" level="project" name="Maven: jakarta.servlet.jsp:jakarta.servlet.jsp-api:3.0.0" />
-          <element id="library" level="project" name="Maven: org.apache.maven.plugins:maven-war-plugin:3.3.2" />
-          <element id="library" level="project" name="Maven: org.apache.maven:maven-plugin-api:3.1.0" />
-          <element id="library" level="project" name="Maven: org.apache.maven:maven-core:3.1.0" />
-          <element id="library" level="project" name="Maven: org.apache.maven:maven-settings:3.1.0" />
-          <element id="library" level="project" name="Maven: org.apache.maven:maven-settings-builder:3.1.0" />
-          <element id="library" level="project" name="Maven: org.apache.maven:maven-repository-metadata:3.1.0" />
-          <element id="library" level="project" name="Maven: org.apache.maven:maven-model-builder:3.1.0" />
-          <element id="library" level="project" name="Maven: org.apache.maven:maven-aether-provider:3.1.0" />
-          <element id="library" level="project" name="Maven: org.eclipse.aether:aether-spi:0.9.0.M2" />
-          <element id="library" level="project" name="Maven: org.eclipse.aether:aether-impl:0.9.0.M2" />
-          <element id="library" level="project" name="Maven: org.eclipse.aether:aether-util:0.9.0.M2" />
-          <element id="library" level="project" name="Maven: org.codehaus.plexus:plexus-classworlds:2.4.2" />
-          <element id="library" level="project" name="Maven: org.codehaus.plexus:plexus-component-annotations:1.5.5" />
-          <element id="library" level="project" name="Maven: org.sonatype.plexus:plexus-sec-dispatcher:1.3" />
-          <element id="library" level="project" name="Maven: org.sonatype.plexus:plexus-cipher:1.4" />
-          <element id="library" level="project" name="Maven: org.apache.maven:maven-model:3.1.0" />
-          <element id="library" level="project" name="Maven: org.apache.maven:maven-archiver:3.5.0" />
-          <element id="library" level="project" name="Maven: org.apache.maven:maven-artifact:3.1.0" />
-          <element id="library" level="project" name="Maven: org.apache.maven.shared:maven-shared-utils:3.2.1" />
-          <element id="library" level="project" name="Maven: commons-io:commons-io:2.6" />
-          <element id="library" level="project" name="Maven: org.codehaus.plexus:plexus-archiver:4.2.2" />
-          <element id="library" level="project" name="Maven: org.codehaus.plexus:plexus-io:3.2.0" />
-          <element id="library" level="project" name="Maven: org.apache.commons:commons-compress:1.20" />
-          <element id="library" level="project" name="Maven: org.iq80.snappy:snappy:0.4" />
-          <element id="library" level="project" name="Maven: org.tukaani:xz:1.8" />
-          <element id="library" level="project" name="Maven: org.codehaus.plexus:plexus-interpolation:1.26" />
-          <element id="library" level="project" name="Maven: org.codehaus.plexus:plexus-utils:3.3.0" />
-          <element id="library" level="project" name="Maven: org.apache.maven.shared:maven-filtering:3.1.1" />
-          <element id="library" level="project" name="Maven: org.sonatype.plexus:plexus-build-api:0.0.7" />
-          <element id="library" level="project" name="Maven: org.apache.maven.shared:maven-mapping:3.0.0" />
-          <element id="library" level="project" name="Maven: org.eclipse.aether:aether-api:0.9.0.M2" />
-          <element id="library" level="project" name="Maven: org.eclipse.sisu:org.eclipse.sisu.plexus:0.0.0.M2a" />
-          <element id="library" level="project" name="Maven: javax.enterprise:cdi-api:1.0" />
-          <element id="library" level="project" name="Maven: javax.annotation:jsr250-api:1.0" />
-          <element id="library" level="project" name="Maven: javax.inject:javax.inject:1" />
-          <element id="library" level="project" name="Maven: com.google.guava:guava:10.0.1" />
-          <element id="library" level="project" name="Maven: com.google.code.findbugs:jsr305:1.3.9" />
-          <element id="library" level="project" name="Maven: org.sonatype.sisu:sisu-guice:no_aop:3.1.0" />
-          <element id="library" level="project" name="Maven: aopalliance:aopalliance:1.0" />
-          <element id="library" level="project" name="Maven: org.eclipse.sisu:org.eclipse.sisu.inject:0.0.0.M2a" />
-          <element id="library" level="project" name="Maven: asm:asm:3.3.1" />
-          <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:2.0.3" />
+          <element id="library" level="project" name="Maven: ch.qos.logback:logback-classic:1.2.11" />
+          <element id="library" level="project" name="Maven: ch.qos.logback:logback-core:1.2.11" />
+          <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.32" />
+          <element id="library" level="project" name="Maven: org.jsoup:jsoup:1.15.3" />
           <element id="library" level="project" name="Maven: org.glassfish.web:jakarta.servlet.jsp.jstl:1.2.6" />
           <element id="library" level="project" name="Maven: jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api:1.2.4" />
           <element id="library" level="project" name="Maven: jakarta.el:jakarta.el-api:3.0.2" />
-          <element id="library" level="project" name="Maven: ch.qos.logback:logback-classic:1.4.4" />
-          <element id="library" level="project" name="Maven: ch.qos.logback:logback-core:1.4.4" />
         </element>
       </element>
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/target/nhn_mart_project1-1.0-SNAPSHOT/META-INF/MANIFEST.MF" />
+        <element id="file-copy" path="$PROJECT_DIR$/target/excercise-1.0-SN APSHOT/META-INF/MANIFEST.MF" />
       </element>
       <element id="javaee-facet-resources" facet="nhn_mart_project1/web/Web" />
     </root>

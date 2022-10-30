@@ -1,7 +1,5 @@
 package com.nhnacademy.controller;
 
-import com.nhnacademy.repository.UserRepository;
-
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 

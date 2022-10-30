@@ -1,7 +1,7 @@
 package com.nhnacademy.servlet;
 
 import com.nhnacademy.controller.*;
-import lombok.extern.slf4j.Slf4j;
+import com.nhnacademy.controller.post.*;
 
 import java.io.IOException;
 import javax.servlet.RequestDispatcher;
@@ -23,6 +23,8 @@ public class FrontServlet extends HttpServlet {
         // 공통 처리 - 응답 content-type, character encoding 지정.
         resp.setContentType("text/html");
         resp.setCharacterEncoding("UTF-8");
+        req.setCharacterEncoding("UTF-8");
+
 
         try {
             Command command  = resolveCommand(req.getServletPath(), req.getMethod());
@@ -60,6 +62,35 @@ public class FrontServlet extends HttpServlet {
             command = new UserCreateFormController();
         } else if("/create_user.do".equals(servletPath) && "POST".equalsIgnoreCase(method)){
             command = new UserCreatePostController();
+        } else if("/delete_user.do".equals(servletPath) && "GET".equalsIgnoreCase(method)){
+            command = new UserDeleteViewController();
+        } else if("/modify_user.do".equals(servletPath) && "GET".equalsIgnoreCase(method)){
+            command = new UserModifyViewController();
+        } else if("/delete_user.do".equals(servletPath) && "POST".equalsIgnoreCase(method)){
+            command = new UserDeletePostController();
+        } else if("/modify_user.do".equals(servletPath) && "POST".equalsIgnoreCase(method)){
+            command = new UserModifyPostController();
+        }
+
+
+        else if("/postList.do".equals(servletPath) && "GET".equalsIgnoreCase(method)){
+            command = new PostListViewController();
+        } else if("/postDelete.do".equals(servletPath) && "GET".equalsIgnoreCase(method)){
+            command = new PostModifyViewController();
+        } else if("/postModify.do".equals(servletPath) && "GET".equalsIgnoreCase(method)){
+            command = new PostDeleteViewController();
+        }  else if("/postCreate.do".equals(servletPath) && "GET".equalsIgnoreCase(method)){
+            command = new PostCreateViewController();
+        } else if("/postCreate.do".equals(servletPath) && "POST".equalsIgnoreCase(method)){
+            command = new PostModifyPostController();
+        } else if("/postDelete.do".equals(servletPath) && "POST".equalsIgnoreCase(method)){
+            command = new UserModifyPostController();
+        } else if("/postModify.do".equals(servletPath) && "POST".equalsIgnoreCase(method)){
+            command = new UserModifyPostController();
+        }
+
+        else if("/myPage.do".equals(servletPath) && "GET".equalsIgnoreCase(method)){
+            command = new MyPageViewController();
         }
 
 

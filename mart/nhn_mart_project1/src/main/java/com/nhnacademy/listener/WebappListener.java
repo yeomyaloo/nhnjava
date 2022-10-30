@@ -6,19 +6,29 @@ import com.nhnacademy.repository.ArrayUserRepository;
 import com.nhnacademy.repository.ArrayPostRepository;
 
 import com.nhnacademy.repository.UserRepository;
+import lombok.extern.slf4j.Slf4j;
 
+import javax.servlet.Filter;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 import javax.servlet.annotation.WebListener;
 import javax.servlet.http.HttpSession;
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
 import java.lang.annotation.Annotation;
+import java.net.URISyntaxException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.Objects;
+import java.util.Optional;
 
+
+@Slf4j
 @WebListener
 public class WebappListener implements ServletContextListener {
-
-
 
     @Override
     public void contextInitialized(ServletContextEvent sce) {
@@ -34,16 +44,47 @@ public class WebappListener implements ServletContextListener {
          * */
         servletContext.setAttribute("postRepository", new ArrayUserRepository());
 
+        servletContext.setAttribute("boardId","0");
 
-        User user = (User) servletContext.getAttribute("newUser");
+        /**
+         * count 작업 시작
+         * */
+        String counterFileName = "counter.dat";
+        String counterFilePath = "/WEB-INF/classes/" + counterFileName;
 
+        int cnt = 0;
 
-
-
+        try (DataInputStream dis = new DataInputStream(servletContext.getResourceAsStream(counterFilePath))){
+            cnt = dis.readInt();
+        } catch (IOException e) {
+            log.error("", e);
+        }
+        servletContext.setAttribute("counter", cnt);
     }
 
     @Override
-    public void contextDestroyed(ServletContextEvent servletContextEvent) {
+    public void contextDestroyed(ServletContextEvent sce) {
+        ServletContext servletContext = sce.getServletContext();
 
+        /**
+         * counter 작업 destroy()
+         * */
+        String counterFileName = "counter.dat";
+        String counterFilePath = "/WEB-INF/classes/" + counterFileName;
+
+
+        int cnt = Optional.ofNullable(servletContext.getAttribute("counter")).
+                map(Integer.class::cast)
+                .orElse(0);
+
+        try (OutputStream os = Files.newOutputStream(
+                Paths.get(servletContext.getResource(counterFilePath).toURI()));
+             DataOutputStream dos = new DataOutputStream(os)) {
+            dos.writeInt(cnt);
+        } catch (IOException | URISyntaxException ex) {
+            log.error("", ex);
+        }
     }
+
 }
+
