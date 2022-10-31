@@ -7,6 +7,10 @@
 --%>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<fmt:setLocale value="en"/>
+<fmt:bundle basename="message">
+
 <html>
   <head>
     <meta charset="UTF-8">
@@ -18,7 +22,6 @@
 
   <style>
     .login_form{
-
       align-content: center;
       width: 300px;
       height: 300px;
@@ -44,5 +47,8 @@
   </div>
 
 
+  <fmt:message key="hello" />
+
   </body>
 </html>
+</fmt:bundle>

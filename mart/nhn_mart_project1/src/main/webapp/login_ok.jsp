@@ -24,7 +24,7 @@
 
             <h1> 관리자 페이지 </h1>
             <h3> 오늘의 방문자 : ${counter}</h3>
-
+            <div></div>
             <p>[<span> ${id} </span>] 계정으로 로그인 했습니다.</p>
 
             <a href="/find_user.do"> 회원 조회하기 </a></br>
@@ -60,9 +60,6 @@
                     <button type="submit" name="logout">로그아웃 하기</button>
                 </form>
             </c:if>
-
-
-
         </c:when>
 
     </c:choose>

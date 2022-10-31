@@ -11,6 +11,10 @@
     <title>Title</title>
 </head>
 <body>
+    <h1> 게시물 삭제 페이지 </h1>
+    <form action="/" method="post">
+        <input type="text" name="delete_id_param">
+    </form>
 
 </body>
 </html>

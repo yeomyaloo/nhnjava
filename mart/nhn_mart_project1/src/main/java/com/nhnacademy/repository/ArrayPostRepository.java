@@ -14,15 +14,19 @@ public class ArrayPostRepository implements PostRepository{
     private long postId;
     private String title;
     private String content;
+
+    private String id;
+
     private LocalDateTime createdDate;
     private LocalDateTime modifiedDate;
 
     @Override
     public long register(Post post) {
-        if(!isPost(post.getId())){
-            postList.add(post);
-        }else {
-            System.out.println("해당 번호로 게시글이 작성되었습니다.");
+        for (Post forPost: postList){
+            if(forPost.getId() == post.getId()){
+                postList.add(post);
+                return post.getId();
+            }
         }
         return post.getId();
     }

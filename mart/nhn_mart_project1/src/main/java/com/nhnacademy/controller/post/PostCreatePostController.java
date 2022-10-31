@@ -21,13 +21,14 @@ public class PostCreatePostController implements Command {
         String content = req.getParameter("postContent");
         String user = req.getParameter("postUserId");
 
-        ServletContext servletContext = req.getSession().getServletContext();
+        ServletContext servletContext = req.getServletContext();
         PostRepository postRepository = (PostRepository) servletContext.getAttribute("postRepository");
 
 
         int boradID = (int) servletContext.getAttribute("boardId");
 
         if (Objects.nonNull(postRepository)) {
+
             Post post = new PostImp(++boradID, title, content, user, LocalDateTime.now());
             servletContext.setAttribute("boardId", boradID);
             postRepository.register(post);
