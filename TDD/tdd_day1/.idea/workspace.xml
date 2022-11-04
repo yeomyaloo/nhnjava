@@ -37,60 +37,60 @@
     "WebServerToolWindowFactoryState": "false",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "last_opened_file_path": "/Users/yeomhwiju/Documents/GitHub/nhnjava/TDD/tdd_day1/src/test",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)"
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "run.code.analysis.last.selected.profile": "pProject Default"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.nhnacademy.edu.hwiju.tdd" />
+      <recent name="com.nhnacademy.edu.hwiju.tdd.mart" />
+      <recent name="com.nhnacademy.edu.hwiju.tdd.account" />
       <recent name="com.nhnacademy.edu" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/java" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.nhnacademy.edu.hwiju.tdd" />
+      <recent name="com.nhnacademy.edu.hwiju.tdd.mart" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.nhnacademy.edu.hwiju.tdd.account" />
       <recent name="com.nhnacademy.edu.hwiju.tdd" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.DisplayNameGeneratorDemo$A_year_is_not_supported.if_it_is_negative">
-    <configuration name="CalculatorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.AccountServiceStubTest.login">
+    <configuration name="AccountServiceMockTest.login_usernameIsNull_throwIllegalArgumentException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tdd_day1" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.nhnacademy.edu.hwiju.tdd.*" />
+          <option name="PATTERN" value="com.nhnacademy.edu.hwiju.tdd.account.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.nhnacademy.edu.hwiju.tdd" />
-      <option name="MAIN_CLASS_NAME" value="com.nhnacademy.edu.hwiju.tdd.CalculatorTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DisplayNameGeneratorDemo$A_year_is_not_supported.if_it_is_negative" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="tdd_day1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.nhnacademy.edu.hwiju.tdd.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.nhnacademy.edu.hwiju.tdd.DisplayNameGeneratorDemo" />
-      <option name="MAIN_CLASS_NAME" value="com.nhnacademy.edu.hwiju.tdd.DisplayNameGeneratorDemo$A_year_is_not_supported" />
-      <option name="METHOD_NAME" value="if_it_is_negative(int)" />
+      <option name="PACKAGE_NAME" value="com.nhnacademy.edu.hwiju.tdd.account" />
+      <option name="MAIN_CLASS_NAME" value="com.nhnacademy.edu.hwiju.tdd.account.AccountServiceMockTest" />
+      <option name="METHOD_NAME" value="login_usernameIsNull_throwIllegalArgumentException" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StandardTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AccountServiceStubTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tdd_day1" />
       <extension name="coverage">
         <pattern>
@@ -99,7 +99,54 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.nhnacademy.edu.hwiju.tdd" />
-      <option name="MAIN_CLASS_NAME" value="com.nhnacademy.edu.hwiju.tdd.StandardTest" />
+      <option name="MAIN_CLASS_NAME" value="com.nhnacademy.edu.hwiju.tdd.AccountServiceStubTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AccountServiceStubTest.login" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tdd_day1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.nhnacademy.edu.hwiju.tdd.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.nhnacademy.edu.hwiju.tdd" />
+      <option name="MAIN_CLASS_NAME" value="com.nhnacademy.edu.hwiju.tdd.AccountServiceStubTest" />
+      <option name="METHOD_NAME" value="login" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AssertionTest.exceptionTesting" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tdd_day1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.nhnacademy.edu.hwiju.tdd.acoount.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.nhnacademy.edu.hwiju.tdd" />
+      <option name="MAIN_CLASS_NAME" value="com.nhnacademy.edu.hwiju.tdd.AssertionTest" />
+      <option name="METHOD_NAME" value="exceptionTesting" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AssertjSimpleTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tdd_day1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.nhnacademy.edu.hwiju.tdd.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.nhnacademy.edu.hwiju.tdd" />
+      <option name="MAIN_CLASS_NAME" value="com.nhnacademy.edu.hwiju.tdd.AssertjSimpleTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -107,9 +154,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.DisplayNameGeneratorDemo$A_year_is_not_supported.if_it_is_negative" />
-        <item itemvalue="JUnit.StandardTest" />
-        <item itemvalue="JUnit.CalculatorTest" />
+        <item itemvalue="JUnit.AccountServiceStubTest.login" />
+        <item itemvalue="JUnit.AccountServiceStubTest (1)" />
+        <item itemvalue="JUnit.AssertjSimpleTest" />
+        <item itemvalue="JUnit.AssertionTest.exceptionTesting" />
+        <item itemvalue="JUnit.AccountServiceMockTest.login_usernameIsNull_throwIllegalArgumentException" />
       </list>
     </recent_temporary>
   </component>
@@ -122,7 +171,7 @@
       <option name="presentableId" value="Default" />
       <updated>1667200765563</updated>
       <workItem from="1667200767548" duration="2317000" />
-      <workItem from="1667261230887" duration="7749000" />
+      <workItem from="1667261230887" duration="30560000" />
     </task>
     <servers />
   </component>
