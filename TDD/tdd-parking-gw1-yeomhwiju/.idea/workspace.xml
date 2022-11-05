@@ -39,6 +39,7 @@
     "WebServerToolWindowFactoryState": "false",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "last_directory_selection": "/Users/yeomhwiju/Documents/GitHub/nhnjava/TDD/tdd-parking-gw1-yeomhwiju/src/main/java/com/nhnacademy/gw1/parking/repository",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -49,6 +50,9 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.nhnacademy.gw1.parking.repository" />
+    </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
@@ -57,18 +61,33 @@
       <recent name="com.nhnacademy.gw1.parking.service" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ParkingSpaceTest">
-    <configuration name="ExitServiceTest.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.ParkingSpaceTest.test2">
+    <configuration name="ParkingLotTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tdd-parking-gw1-yeomhwiju" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.nhnacademy.gw1.parking.domain.*" />
+          <option name="PATTERN" value="com.nhnacademy.gw1.parking.repository.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.nhnacademy.gw1.parking.service" />
-      <option name="MAIN_CLASS_NAME" value="com.nhnacademy.gw1.parking.service.ExitServiceTest" />
-      <option name="METHOD_NAME" value="test1" />
+      <option name="PACKAGE_NAME" value="com.nhnacademy.gw1.parking.repository" />
+      <option name="MAIN_CLASS_NAME" value="com.nhnacademy.gw1.parking.repository.ParkingLotTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ParkingLotTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tdd-parking-gw1-yeomhwiju" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.nhnacademy.gw1.parking.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.nhnacademy.gw1.parking.repository" />
+      <option name="MAIN_CLASS_NAME" value="com.nhnacademy.gw1.parking.repository.ParkingLotTest" />
+      <option name="METHOD_NAME" value="test" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -123,10 +142,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ParkingSpaceTest" />
         <item itemvalue="JUnit.ParkingSpaceTest.test2" />
+        <item itemvalue="JUnit.ParkingLotTest" />
+        <item itemvalue="JUnit.ParkingLotTest.test" />
+        <item itemvalue="JUnit.ParkingSpaceTest" />
         <item itemvalue="JUnit.ParkingSpaceTest.test1" />
-        <item itemvalue="JUnit.ExitServiceTest.test1" />
       </list>
     </recent_temporary>
   </component>
@@ -138,7 +158,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1667528799504</updated>
-      <workItem from="1667528802948" duration="8930000" />
+      <workItem from="1667528802948" duration="15193000" />
     </task>
     <servers />
   </component>
