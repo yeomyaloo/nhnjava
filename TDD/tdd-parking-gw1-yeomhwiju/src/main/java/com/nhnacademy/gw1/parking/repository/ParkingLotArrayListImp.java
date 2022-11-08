@@ -4,7 +4,9 @@ import com.nhnacademy.gw1.parking.domain.Car;
 import com.nhnacademy.gw1.parking.exception.AlreadyExistsCarNumberException;
 import com.nhnacademy.gw1.parking.exception.NotFoundParkedCarException;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class ParkingLotArrayListImp implements ParkingLot{
@@ -14,12 +16,17 @@ public class ParkingLotArrayListImp implements ParkingLot{
 
     Car car;
 
+    Code code;
+
     List<Car> list = new ArrayList<>();
 
+    LocalDateTime enterTime;
 
-    public ParkingLotArrayListImp(Car car) {
+    LocalDateTime exitTime;
+
+    public ParkingLotArrayListImp(Car car, Code code) {
         this.car = car;
-
+        this.code = code;
     }
 
 
@@ -27,6 +34,7 @@ public class ParkingLotArrayListImp implements ParkingLot{
     public void enter() {
         isNot_exist_CarCheck();
         list.add(this.car);
+        enterTime = LocalDateTime.now();
     }
 
     private boolean isNot_exist_CarCheck() {
@@ -40,18 +48,34 @@ public class ParkingLotArrayListImp implements ParkingLot{
 
 
     @Override
-    public Car exit() {
+    public Car exit(String exitCarNumber) {
         for (Car parkingCar : list) {
-            if(parkingCar.getCarNumber().equals(car.getCarNumber())){
+            if(parkingCar.getCarNumber().equals(exitCarNumber)){
                 list.remove(parkingCar);
+                exitTime = LocalDateTime.now();
                 return parkingCar;
             }
         }
-
         throw new NotFoundParkedCarException();
     }
 
     public List<Car> getList() {
         return list;
     }
+
+    public Car parkingALotGetCar(){
+        return this.car;
+    }
+
+    @Override
+    public LocalDateTime getStartTime() {
+        return enterTime;
+    }
+
+    @Override
+    public LocalDateTime getExitTime() {
+        return exitTime;
+    }
+
+
 }

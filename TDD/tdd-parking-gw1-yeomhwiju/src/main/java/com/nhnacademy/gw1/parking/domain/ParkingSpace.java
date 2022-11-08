@@ -5,10 +5,8 @@ import com.nhnacademy.gw1.parking.repository.Code;
 
 public class ParkingSpace{
 
-
     //특정 주차구역
     //String code;
-
     Code code;
     Car car;
 

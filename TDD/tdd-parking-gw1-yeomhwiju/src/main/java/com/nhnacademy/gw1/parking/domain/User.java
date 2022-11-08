@@ -1,4 +1,9 @@
 package com.nhnacademy.gw1.parking.domain;
 
-public class User {
+public interface User {
+
+    public String getId();
+    public int getMoney();
+    public String getCarNumber();
+
 }

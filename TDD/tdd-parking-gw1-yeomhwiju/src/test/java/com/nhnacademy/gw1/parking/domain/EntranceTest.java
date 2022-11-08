@@ -1,17 +1,18 @@
-package com.nhnacademy.gw1.parking.service;
+package com.nhnacademy.gw1.parking.domain;
 
-import com.nhnacademy.gw1.parking.domain.Car;
-import com.nhnacademy.gw1.parking.domain.Entrance;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
-class ExitServiceTest {
+class EntranceTest {
 
     @DisplayName("차가 들어오면 번호판을 인식한다.")
     @Test
-    void test1(){
+    void scanner_carNumber(){
 
         String carNumber = "1234";
         Car car = new Car(carNumber);
@@ -19,6 +20,11 @@ class ExitServiceTest {
         Entrance entrance = new Entrance();
         assertThat(entrance.scan(car).getCarNumber()).isEqualTo("1234");
 
+
+        Date today = new Date();
+
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("hh:mm:ss");
+        System.out.println(simpleDateFormat.format(today));
     }
 
 
