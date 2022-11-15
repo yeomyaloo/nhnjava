@@ -19,22 +19,22 @@ public class NowController {
     }
 
 
-//    // POJO를 더한 방식으로 모델을 넘겨주는 방식
-//    @GetMapping("/now2")
-//    public String now2(Model model) {
-//        Current current =new Current(LocalDateTime.now());
-//        model.addAttribute("current", current.getLocalDateTime());
-//        return "now2";
-//    }
+    // POJO를 더한 방식으로 모델을 넘겨주는 방식
+    @GetMapping("/now2")
+    public String now2(Model model) {
+        Current current =new Current(LocalDateTime.now());
+        model.addAttribute("current", current.getLocalDateTime());
+        return "now2";
+    }
 
 
     //최근 트랜드 modelAndView를 사용해서 해당 객체를 넘겨주는 방식..
     @GetMapping("/now3")
-    public String now3(Model model) {
+    public ModelAndView now3() {
         ModelAndView modelAndView = new ModelAndView("now2");
         Current current =new Current(LocalDateTime.now());
-        modelAndView.addObject("current", current);
-        return "now2";
+        modelAndView.addObject("current", current.getLocalDateTime());
+        return modelAndView;
     }
 
     class Current {
