@@ -1,0 +1,31 @@
+package com.nhnacademy.nhnmart.config;
+
+import com.nhnacademy.nhnmart.Base;
+import com.nhnacademy.springmvc.Base;
+import com.nhnacademy.springmvc.repository.*;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.stereotype.Controller;
+
+@Configuration
+@ComponentScan(basePackageClasses = Base.class,
+    excludeFilters = { @ComponentScan.Filter(Controller.class)})
+public class RootConfig {
+
+    @Bean
+    public StudentRepository studentRepository() {
+        StudentRepository studentRepository = new StudentRepositoryImpl();
+        studentRepository.register("김학생", "kim.student@nhnacademy.com", 100, "훌륭");
+
+        return studentRepository;
+    }
+
+    @Bean
+    public UserRepository userRepository(){
+        UserRepository userRepository = new UserRepositoryImpl();
+        userRepository.addUser("admin", "1234");
+        return userRepository;
+    }
+
+}

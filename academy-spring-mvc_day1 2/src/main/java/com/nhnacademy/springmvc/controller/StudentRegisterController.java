@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.validation.Valid;
+
 @Controller
 @RequestMapping("/student/register")
 public class StudentRegisterController {
@@ -27,7 +29,7 @@ public class StudentRegisterController {
     }
 
     @PostMapping
-    public ModelAndView registerStudent(@ModelAttribute StudentRegister studentRegister, Model model) {
+    public ModelAndView registerStudent(@Valid @ModelAttribute StudentRegister studentRegister) {
         ModelAndView modelAndView = new ModelAndView("studentView");
         Student student = studentRepository.register(studentRegister.getName(),studentRegister.getEmail(), studentRegister.getScore(), studentRegister.getComment());
         modelAndView.addObject("student", student);

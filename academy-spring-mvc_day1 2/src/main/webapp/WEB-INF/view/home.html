@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:fmt="http://www.w3.org/1999/XSL/Transform">
+<head>
+    <meta charset="UTF-8">
+    <title>home</title>
+</head>
+<body>
+    <h1 th:text="#{greeting}"></h1>
+    <a href="?locale=ko"><span th:utext="${#locale.toString().contains('ko') ? '<b>ko</b>' : 'ko'}"></span></a><br />
+    <a href="?locale=en"><span th:utext="${#locale.toString().contains('en') ? '<b>en</b>' : 'en'}"></span></a><br />
+
+    <form method="post" action="/logout">
+        <button type="submit" name="logout"> logout</button>
+    </form>
+</body>
+</html>

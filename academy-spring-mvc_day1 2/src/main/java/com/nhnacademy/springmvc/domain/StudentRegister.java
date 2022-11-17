@@ -1,14 +1,17 @@
 package com.nhnacademy.springmvc.domain;
 
 
-import lombok.Value;
+import lombok.*;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
-@Value
+@NoArgsConstructor
+@Getter
+@Setter
+@AllArgsConstructor
 public class StudentRegister {
 
 
@@ -25,6 +28,8 @@ public class StudentRegister {
     @NotBlank
     @Size(min = 0, max = 200)
     String comment;
+
+
 
 
 }

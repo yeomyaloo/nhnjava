@@ -2,6 +2,7 @@ package com.nhnacademy.springmvc.repository;
 
 import com.nhnacademy.springmvc.domain.Student;
 import com.nhnacademy.springmvc.exception.NotFoundStudentException;
+import org.springframework.http.HttpStatus;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -14,7 +15,7 @@ public class StudentRepositoryImpl implements StudentRepository {
 
     @Override
     public boolean exists(long id) {
-        return false;
+        return map.containsKey(id);
     }
 
     @Override
@@ -25,16 +26,6 @@ public class StudentRepositoryImpl implements StudentRepository {
         return student;
     }
 
-    @Override
-    public Student getStudent(long id) {
-        //FIXME: 예외처리
-        if(map.containsKey(id)){
-
-            throw new NotFoundStudentException();
-        }
-        return map.get(id);
-
-    }
 
     @Override
     public Student modify(long id, String name, String email, int score, String comment) {
@@ -45,6 +36,15 @@ public class StudentRepositoryImpl implements StudentRepository {
         return newStudent;
     }
 
+    @Override
+    public Student getStudent(long id) {
+        //FIXME: 예외처리
+        if(!map.containsKey(id)){
+            throw new NotFoundStudentException();
+        }
+        return map.get(id);
+
+    }
 
 
 

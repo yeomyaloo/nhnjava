@@ -5,11 +5,13 @@ import com.nhnacademy.springmvc.domain.StudentRegister;
 import com.nhnacademy.springmvc.exception.NotFoundStudentException;
 import com.nhnacademy.springmvc.repository.StudentRepository;
 import com.oracle.wls.shaded.org.apache.xpath.operations.Mod;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.server.ResponseStatusException;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.validation.Valid;
@@ -27,7 +29,11 @@ public class StudentController {
 
     @ModelAttribute("student")
     public Student getStudent(@PathVariable("studentId") long studentId){
-        return studentRepository.getStudent(studentId);
+         Student student = studentRepository.getStudent(studentId);
+        if(!studentRepository.exists(studentId)){
+            throw new NotFoundStudentException();
+        }
+        return student;
     }
 
     @GetMapping("/{studentId}")
@@ -45,24 +51,17 @@ public class StudentController {
                              @PathVariable("studentId") long studentId,
                              ModelMap modelMap) {
 
-        modelMap.put("student",
-                studentRepository.modify(studentId, studentRegister.getName(), studentRegister.getEmail(), studentRegister.getScore(), studentRegister.getComment()));
+        modelMap.put("student", studentRepository.modify(studentId, studentRegister.getName(), studentRegister.getEmail(), studentRegister.getScore(), studentRegister.getComment()));
         return "studentView";
     }
 
     @GetMapping(value = "/{studentId}", params ="hideScore=YES")
-    public String hideScore(@RequestParam(value = "hideScore", required = false) String hideScore){
-        if(hideScore.equals("YES")){
-            return "studentHideView";
-        } else {
-            return "studentView";
-        }
-
+    public String hideScore(){
+        return "studentHideView";
     }
 
-
-
     @ExceptionHandler(NotFoundStudentException.class)
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
     public String handleNotFoundStudentException(Model model, NotFoundStudentException e) {
         model.addAttribute("exception", e);
         return "error";

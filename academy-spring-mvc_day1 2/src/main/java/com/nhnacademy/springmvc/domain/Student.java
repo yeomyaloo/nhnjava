@@ -13,7 +13,6 @@ import javax.validation.constraints.Size;
 public class Student {
     private long id;
 
-
     private String name;
 
     private String email;
