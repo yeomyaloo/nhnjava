@@ -1,0 +1,29 @@
+#사용자 생성
+POST localhost:8080/students/register HTTP/1.1
+Content-type: application/json
+
+{
+  "name": "yaloo",
+  "email": "yaloo@naver.com",
+  "score": 100,
+  "comment": "Good"
+
+}
+
+###
+GET localhost:8080/students/2 HTTP/1.1
+Content-type: application/json
+
+###
+PUT localhost:8080/students/2/modify HTTP/1.1
+Content-type: application/json
+
+{
+  "name": "yaloo",
+  "email": "yaloo@naver.com",
+  "score": 99,
+  "comment": "VERY GOOD"
+
+}
+
+

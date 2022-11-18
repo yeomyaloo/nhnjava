@@ -1,0 +1,13 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8" />
+  <title>학생 정보 조회</title>
+</head>
+<body>
+<div> 이름: <span th:text = "${student.name}"/></div><br />
+<div> 이메일: <span th:text = "${student.email}"/></div><br />
+<div> 성적: <span th:text = "${student.score}"/></div><br />
+<div> 평가: <span th:text = "${student.comment}"/></div><br />
+<a th:href="@{/student/{studentId}/modify(studentId=${student.id})}">정보 수정</a><br />
+</body>
+</html>
