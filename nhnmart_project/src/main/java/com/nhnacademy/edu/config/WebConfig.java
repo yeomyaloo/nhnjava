@@ -109,14 +109,14 @@ public class WebConfig implements WebMvcConfigurer, ApplicationContextAware, Mes
         return messageSource;
     }
 
-    @Override
-    public void configureContentNegotiation(ContentNegotiationConfigurer configurer) {
-        configurer.favorParameter(true)
-                .parameterName("format")
-                .ignoreAcceptHeader(true)
-                .defaultContentType(MediaType.APPLICATION_JSON)
-                .mediaType("json", MediaType.APPLICATION_JSON)
-                .mediaType("xml", MediaType.APPLICATION_XML);
-    }
+//    @Override
+//    public void configureContentNegotiation(ContentNegotiationConfigurer configurer) {
+//        configurer.favorParameter(true)
+//                .parameterName("format")
+//                .ignoreAcceptHeader(true)
+//                .defaultContentType(MediaType.APPLICATION_JSON)
+//                .mediaType("json", MediaType.APPLICATION_JSON)
+//                .mediaType("xml", MediaType.APPLICATION_XML);
+//    }
 
 }

@@ -63,7 +63,6 @@ class RestApiControllerTest {
     @Test
     void registerStudentViewController() throws Exception {
 
-
         Student student = new Student(1,"hi", "hi@mail.com", 1, "bad");
         when(studentRepository.register("hi", "hi@mail.com", 1, "bad")).thenReturn(student);
 

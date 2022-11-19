@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"><head>
+<head>
+    <meta charset="UTF-8">
+    <title>loginSuccess</title>
+</head>
+<body>
+
+
+    <div th:value="${admin == T(com.nhnacademy.edu.domain.UserRole.ADMIN).getAuthority()}">
+        <a>게시글 작성</a>
+        <form method="get" action="/logout">
+            <button type="submit">로그아웃하기</button>
+        </form>
+    </div>
+
+    <div th:if="${customer eq T(com.nhnacademy.edu.domain.UserRole.CUSTOMER).getAuthority()}">
+        <a>게시글 작성</a>
+        <form method="get" action="/logout">
+            <button type="submit">로그아웃하기</button>
+        </form>
+    </div>
+</body>
+</html>

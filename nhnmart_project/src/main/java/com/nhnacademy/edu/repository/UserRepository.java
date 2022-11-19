@@ -16,5 +16,4 @@ public interface UserRepository {
     public User addUser(String id, String pwd, String name);
 
     public User modify(User user);
-    }
 }
