@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<table>
+    <thead>
+    <tr>
+        <th>게시글 번호</th>
+        <th>제목</th>
+        <th>문의 유형</th>
+        <th>작성자</th>
+        <th>작성일시</th>
+        <th>답변여부</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each=" postList: ${inquiryList.values()}">
+        <td><span th:text="${postList.postCnt}"></span></td>
+        <td><a th:href="@{/cs/inquiry/{inquiryNo}(inquiryNo = ${postList.postCnt})}"><span th:text="${postList.title}"></span></a></td>
+        <td><span th:text="${postList.postCategory}"></span></td>
+        <td><span th:text="${postList.userId}"></span></td>
+        <td><span th:text="${postList.localDate}"></span></td>
+        <td><span th:text="${postList.isCheck}"></span></td>
+    </tr>
+    </tbody>
+</table>
+<a th:href="@{/cs/inquiry/write}">문의 작성</a>
+
+
+<form method="get" th:action="@{/cs/inquiry/search}">
+    <select name = "postCategory">
+        <option th:each="postCategoryOpt: ${T(com.nhnacademy.edu.domain.PostCategory).values()}"
+                th:value="${postCategoryOpt}" th:text="${postCategoryOpt}"></option>
+    </select>
+    <button type="submit"> 검색하기 </button>
+</form>
+
+</body>
+</html>

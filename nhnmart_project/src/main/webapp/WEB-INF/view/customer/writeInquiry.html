@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>write inquiry</title>
+</head>
+<body>
+
+<form method="post" th:href="@{/cs/inquiry}">
+    <input type="text" name ="title">
+    <select name = "postCategory">
+        <option th:each="postCategoryOpt: ${T(com.nhnacademy.edu.domain.PostCategory).values()}"
+        th:value="${postCategoryOpt}" th:text="${postCategoryOpt}"></option>
+    </select>
+    <input name="content">
+
+    <button type="submit"> 확인 </button>
+
+</form>
+    <button th:href="@{/cs/inquiry}"> 취소 </button>
+</body>
+</html>

@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>회원 페이지</title>
 </head>
 <body>
-    <a>게시글 작성</a>
+    <h1>회원 페이지</h1>
+    <div><span th:text="${user.id}"></span> 회원님 반갑습니다.</div>
+    <a th:href="@{/cs/inquiry}">문의하기</a>
     <form method="get" action="/logout">
         <button type="submit">로그아웃하기</button>
     </form>

@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>관리자 페이지</title>
 </head>
 <body>
-    <a>작성된 게시글 확인하기</a>
+    <h1>관리자 페이지</h1>
+    <div><span th:text="${user.id}"></span>: 관리자</div>
+    <a th:href="@{/cs/admin/inquiry}">문의 내역 확인하기</a>
     <form method="get" action="/logout">
         <button type="submit">로그아웃하기</button>
     </form>

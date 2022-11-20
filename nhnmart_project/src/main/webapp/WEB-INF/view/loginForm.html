@@ -5,8 +5,8 @@
 </head>
 <body>
     <form method="post" action="/login">
-        <input type="text" name="id">
-        <input type="password" name="pwd">
+        ID: <input type="text" name="id"></br>
+        PASSWORD: <input type="password" name="pwd"></br>
         <button type="submit">로그인</button>
     </form>
     <div th:if="${userNotMatchException}">유효하지 않은 아이디와 비밀번호입니다. 다시 확인해주세요.</div>

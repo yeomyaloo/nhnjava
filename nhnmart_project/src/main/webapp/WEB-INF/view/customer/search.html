@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<table>
+    <thead>
+    <tr>
+        <th>게시글 번호</th>
+        <th>제목</th>
+        <th>문의 유형</th>
+        <th>작성자</th>
+        <th>작성일시</th>
+        <th>답변여부</th>
+    </tr>
+    </thead>
+    <tbody>
+    <div th:text="${searchList}"> </div>
+    <tr th:each=" list: ${searchList}">
+        <td><span th:text="${list.postCnt}"></span></td>
+        <td><a th:href="@{/cs/inquiry/{inquiryNo}(inquiryNo = ${list.postCnt})}"><span th:text="${list.title}"></span></a></td>
+        <td><span th:text="${list.postCategory}"></span></td>
+        <td><span th:text="${list.userId}"></span></td>
+        <td><span th:text="${list.localDate}"></span></td>
+        <td><span th:text="${list.isCheck}"></span></td>
+    </tr>
+    </tbody>
+</table>
+
+<div th:if="${postNotExistCategory}">해당 검색하신 카테고리에 해당하는 글이 없습니다.</div>
+<a th:href="@{/cs/inquiry}">문의 목록으로 돌아가기</a>
+</body>
+</html>

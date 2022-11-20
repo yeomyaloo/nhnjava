@@ -1,6 +1,8 @@
 package com.nhnacademy.edu.config;
 
 import com.nhnacademy.edu.controller.ControllerBase;
+import com.nhnacademy.edu.interceptor.AdminInterceptor;
+import com.nhnacademy.edu.interceptor.LoginInterceptor;
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
@@ -49,11 +51,12 @@ public class WebConfig implements WebMvcConfigurer, ApplicationContextAware, Mes
         return new SessionLocaleResolver();
     }
 
-//    @Override
-//    public void addInterceptors(InterceptorRegistry registry) {
-//        registry.addInterceptor(new LocaleChangeInterceptor());
-//        registry.addInterceptor(new LoginInterceptor()).excludePathPatterns("/","/login","/students/**");
-//    }
+    @Override
+    public void addInterceptors(InterceptorRegistry registry) {
+        registry.addInterceptor(new LocaleChangeInterceptor());
+        registry.addInterceptor(new LoginInterceptor()).excludePathPatterns("/","/login");
+        registry.addInterceptor(new AdminInterceptor()).addPathPatterns("/admin/**").excludePathPatterns("/", "/login");
+    }
 
     @Bean
     public MultipartResolver multipartResolver() {

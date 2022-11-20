@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<table>
+    <thead>
+    <tr>
+        <th>게시글 번호</th>
+        <th>제목</th>
+        <th>문의 유형</th>
+        <th>작성자</th>
+        <th>작성일시</th>
+        <th>답변여부</th>
+        <th>답변 작성</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each=" list: ${adminAnswerList}">
+        <td><span th:text="${list.postCnt}"></span></td>
+        <td><a th:href="@{/cs/admin/inquiry/{inquiryNo}(inquiryNo = ${list.postCnt})}"><span th:text="${list.title}"></span></a></td>
+        <td><span th:text="${list.postCategory}"></span></td>
+        <td><span th:text="${list.userId}"></span></td>
+        <td><span th:text="${list.localDate}"></span></td>
+        <td><span th:text="${list.isCheck}"></span></td>
+        <td><a th:href="@{/cs/admin/inquiry/answer}"></a></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

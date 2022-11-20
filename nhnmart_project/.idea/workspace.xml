@@ -10,22 +10,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4398d5b7-893c-4031-baae-ddd8dbbe8c35" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../academy-spring-mvc_day1 2 2/src/test/java/com/nhnacademy/springmvc/controllor/RestApiControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../academy-spring-mvc_day1 2 2/src/test/java/com/nhnacademy/springmvc/controllor/RestApiControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/nhnacademy/edu/exception/UserAlreadyExistException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../academy-spring-mvc_day1 2 2/src/main/webapp/WEB-INF/view/studentHideView.html" beforeDir="false" afterPath="$PROJECT_DIR$/../academy-spring-mvc_day1 2 2/src/main/webapp/WEB-INF/view/studentHideView.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/nhnacademy/edu/config/RootConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nhnacademy/edu/config/RootConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/nhnacademy/edu/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nhnacademy/edu/config/WebConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/nhnacademy/edu/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nhnacademy/edu/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nhnacademy/edu/domain/Admin.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nhnacademy/edu/domain/Customer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nhnacademy/edu/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nhnacademy/edu/domain/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nhnacademy/edu/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nhnacademy/edu/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nhnacademy/edu/controller/LogoutController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nhnacademy/edu/controller/LogoutController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nhnacademy/edu/controller/UserPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nhnacademy/edu/controller/UserPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nhnacademy/edu/exception/AlreadyExistUserException.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/nhnacademy/edu/repository/UserRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nhnacademy/edu/repository/UserRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/admin/loginSuccess_admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/admin/loginSuccess_admin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/customer/loginSuccess_customer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/customer/loginSuccess_customer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/loginForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/loginForm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/loginSuccess.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nhnacademy/edu/config/RootConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nhnacademy/edu/config/RootConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nhnacademy/edu/config/WebConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nhnacademy/edu/config/WebConfig.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/nhnacademy/edu/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nhnacademy/edu/controller/LoginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/nhnmart_project-1.0-SNAPSHOT/WEB-INF/classes/com/nhnacademy/edu/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nhnacademy/edu/controller/LogoutController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nhnacademy/edu/controller/LogoutController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nhnacademy/edu/controller/UserPageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nhnacademy/edu/controller/UserPageController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nhnacademy/edu/exception/AlreadyExistUserException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nhnacademy/edu/repository/UserRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nhnacademy/edu/repository/UserRepositoryImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/nhnmart_project-1.0-SNAPSHOT/WEB-INF/classes/com/nhnacademy/edu/config/RootConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/nhnmart_project-1.0-SNAPSHOT/WEB-INF/classes/com/nhnacademy/edu/config/RootConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/nhnmart_project-1.0-SNAPSHOT/WEB-INF/classes/com/nhnacademy/edu/config/WebConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/nhnmart_project-1.0-SNAPSHOT/WEB-INF/classes/com/nhnacademy/edu/config/WebConfig.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/nhnmart_project-1.0-SNAPSHOT/WEB-INF/classes/com/nhnacademy/edu/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/nhnmart_project-1.0-SNAPSHOT/WEB-INF/classes/com/nhnacademy/edu/controller/LoginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/nhnmart_project-1.0-SNAPSHOT/WEB-INF/view/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/nhnmart_project-1.0-SNAPSHOT/WEB-INF/view/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/nhnmart_project-1.0-SNAPSHOT/WEB-INF/classes/com/nhnacademy/edu/controller/LogoutController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/nhnmart_project-1.0-SNAPSHOT/WEB-INF/classes/com/nhnacademy/edu/controller/LogoutController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/nhnmart_project-1.0-SNAPSHOT/WEB-INF/classes/com/nhnacademy/edu/controller/UserPageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/nhnmart_project-1.0-SNAPSHOT/WEB-INF/classes/com/nhnacademy/edu/controller/UserPageController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/nhnmart_project-1.0-SNAPSHOT/WEB-INF/classes/com/nhnacademy/edu/exception/AlreadyExistUserException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/nhnmart_project-1.0-SNAPSHOT/WEB-INF/classes/com/nhnacademy/edu/repository/UserRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/nhnmart_project-1.0-SNAPSHOT/WEB-INF/classes/com/nhnacademy/edu/repository/UserRepositoryImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/nhnmart_project-1.0-SNAPSHOT/WEB-INF/view/admin/loginSuccess_admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/nhnmart_project-1.0-SNAPSHOT/WEB-INF/view/admin/loginSuccess_admin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/nhnmart_project-1.0-SNAPSHOT/WEB-INF/view/customer/loginSuccess_customer.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/nhnmart_project-1.0-SNAPSHOT/WEB-INF/view/customer/loginSuccess_customer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/nhnmart_project-1.0-SNAPSHOT/WEB-INF/view/loginForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/nhnmart_project-1.0-SNAPSHOT/WEB-INF/view/loginForm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/nhnmart_project-1.0-SNAPSHOT/WEB-INF/view/loginSuccess.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +51,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Enum" />
         <option value="Interface" />
         <option value="JUnit5 Test Class" />
         <option value="Class" />
@@ -86,6 +103,8 @@
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.nhnacademy.edu.exception" />
+      <recent name="com.nhnacademy.edu.controller" />
+      <recent name="com.nhnacademy.edu.interceptor" />
       <recent name="com.nhnacademy.edu.repository" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
@@ -100,14 +119,30 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
-      <recent name="com.nhnacademy.edu.config" />
       <recent name="com.nhnacademy.edu.repository" />
+      <recent name="com.nhnacademy.edu.controller" />
+      <recent name="com.nhnacademy.edu.config" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.nhnacademy.edu.exception" />
+      <recent name="com.nhnacademy.edu.interceptor" />
       <recent name="com.nhnacademy.edu.controller" />
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.68">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.nhnacademy.edu.Main" />
+      <module name="nhnmart_project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.nhnacademy.edu.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ApplicationContextInfoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="nhnmart_project" />
       <extension name="coverage">
@@ -155,17 +190,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ApplicationContextInfoTest.findApplicationBean" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PostRepositoryImplTest.newPostTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="nhnmart_project" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.nhnacademy.edu.config.*" />
+          <option name="PATTERN" value="com.nhnacademy.edu.repository.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.nhnacademy.edu.config" />
-      <option name="MAIN_CLASS_NAME" value="com.nhnacademy.edu.config.ApplicationContextInfoTest" />
-      <option name="METHOD_NAME" value="findApplicationBean" />
+      <option name="PACKAGE_NAME" value="com.nhnacademy.edu.repository" />
+      <option name="MAIN_CLASS_NAME" value="com.nhnacademy.edu.repository.PostRepositoryImplTest" />
+      <option name="METHOD_NAME" value="newPostTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -182,6 +217,8 @@
       </deployment>
       <server-settings>
         <option name="BASE_DIRECTORY_NAME" value="00179356-0e02-4263-b392-3061205ae358" />
+        <option name="HTTP_PORT" value="8070" />
+        <option name="JNDI_PORT" value="1098" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -259,18 +296,20 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="JUnit.PostRepositoryImplTest.newPostTest" />
       <item itemvalue="JUnit.ApplicationContextInfoTest" />
       <item itemvalue="JUnit.ApplicationContextInfoTest.findAllBean" />
       <item itemvalue="JUnit.ApplicationContextInfoTest.findApplcationBean" />
-      <item itemvalue="JUnit.ApplicationContextInfoTest.findApplicationBean" />
       <item itemvalue="Tomcat Server.Tomcat 9.0.68" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.PostRepositoryImplTest.newPostTest" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.ApplicationContextInfoTest" />
         <item itemvalue="JUnit.ApplicationContextInfoTest.findAllBean" />
         <item itemvalue="JUnit.ApplicationContextInfoTest.findApplcationBean" />
-        <item itemvalue="JUnit.ApplicationContextInfoTest.findApplicationBean" />
       </list>
     </recent_temporary>
   </component>
@@ -285,7 +324,7 @@
       <workItem from="1668685459016" duration="2036000" />
       <workItem from="1668730824158" duration="20443000" />
       <workItem from="1668757516263" duration="234000" />
-      <workItem from="1668757783294" duration="9319000" />
+      <workItem from="1668757783294" duration="64684000" />
     </task>
     <servers />
   </component>
@@ -302,5 +341,16 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/nhnacademy/edu/controller/UserPageController.java</url>
+          <line>88</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

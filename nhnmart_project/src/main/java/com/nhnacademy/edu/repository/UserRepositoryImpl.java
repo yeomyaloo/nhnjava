@@ -2,9 +2,8 @@ package com.nhnacademy.edu.repository;
 
 import com.nhnacademy.edu.domain.User;
 import com.nhnacademy.edu.domain.UserRole;
-import com.nhnacademy.edu.exception.AlreadyExistUserException;
+import com.nhnacademy.edu.exception.UserAlreadyExistException;
 import com.nhnacademy.edu.exception.UserNotFoundException;
-import org.springframework.stereotype.Repository;
 
 import java.util.*;
 
@@ -37,7 +36,7 @@ public class UserRepositoryImpl implements UserRepository{
     @Override
     public User addUser(String id, String pwd) {
         User admin = User.create(id, pwd, "admin", UserRole.ADMIN);
-        userMap.put("admin", admin);
+        userMap.put(id, admin);
         return admin;
 
     }
@@ -45,10 +44,10 @@ public class UserRepositoryImpl implements UserRepository{
     @Override
     public User addUser(String id, String pwd, String name) {
         if(exists(id)){
-            throw new AlreadyExistUserException();
+            throw new UserAlreadyExistException();
         }
         User user = User.create(id, pwd, name, UserRole.CUSTOMER);
-        userMap.put(user.getId(), user);
+        userMap.put(id, user);
         return user;
     }
 

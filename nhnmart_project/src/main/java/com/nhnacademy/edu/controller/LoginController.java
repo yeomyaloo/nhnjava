@@ -29,9 +29,12 @@ public class LoginController {
     }
 
     @GetMapping
-    public String isLogin(@CookieValue(value = "SESSION", required = false) String session){
-        if(StringUtils.hasText(session)){
+    public String isLogin(@CookieValue(value = "SESSION", required = false) String session,
+                          @CookieValue(value = "SESSION_ADMIN", required = false) String adminSession){
+        if(StringUtils.hasText(session)) {
             return "redirect:/cs";
+        } else if (StringUtils.hasText(adminSession)){
+            return "redirect:/cs/admin";
         }
         return "loginForm";
     }
@@ -43,16 +46,23 @@ public class LoginController {
                         HttpServletResponse response, Model model){
         if(userRepository.matches(id, pwd)){
             HttpSession session = request.getSession(true);
-            Cookie cookie = new Cookie("SESSION", session.getId());
+            Cookie cookie;
+            if(id.equals("admin")){
+                cookie= new Cookie("SESSION_ADMIN", session.getId());
+            }else {
+                cookie= new Cookie("SESSION", session.getId());
+            }
             response.addCookie(cookie);
 
+
             if(id.equals("admin")){
-                model.addAttribute("user", "admin");
+                model.addAttribute("authority", "admin");
+                return "redirect:/cs/admin";
             } else {
-                model.addAttribute("user", "customer");
+                model.addAttribute("authority", "customer");
+                return "redirect:/cs";
             }
 
-            return "redirect:/cs";
         }
         throw new UserNotMatcheException();
     }
