@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.nhnacademy.jdbc.board.user.mapper.UserMapper">
+
+    <select id="selectUser" resultType="com.nhnacademy.jdbc.board.user.domain.User">
+        select *
+        from User
+        where id = #{id}
+    </select>
+
+    <select id="selectUserByName" resultType="com.nhnacademy.jdbc.board.user.domain.User">
+        select *
+        from User
+        where username = '${username}'
+    </select>
+
+
+    <select id="selectUsers" resultType="com.nhnacademy.jdbc.board.user.domain.User">
+        select *
+        from User
+    </select>
+
+    <insert id="insertUser">
+        insert into User(userName, password, created_at)
+        values ('${userName}','${password}', #{created_at})
+    </insert>
+
+<!--    <update id="updateNameById">-->
+<!--        update User set userName='${userName}'-->
+<!--        where id = #{id}-->
+<!--    </update>-->
+
+<!--    <update id="updatePasswordById">-->
+<!--        update User set password = '${password}'-->
+<!--        where id = #{id} and userName = '${userName}'-->
+<!--    </update>-->
+
+    <delete id="deleteById">
+        delete from User where id=#{id}
+    </delete>
+
+<!--    <select id="matchesIdAndPassword" resultType="boolean" parameterType="String">-->
+<!--        select *-->
+<!--        from User-->
+<!--        where username = '${username}' and password = '${password}';-->
+<!--    </select>-->
+
+</mapper>
