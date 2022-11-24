@@ -17,5 +17,8 @@ public class User {
     // new sql.Date(util.Date().getTime());
 
 
-
+    public User(String name, String password) {
+        this.name = name;
+        this.password = password;
+    }
 }

@@ -16,9 +16,7 @@ public interface UserMapper {
 //    void updateNameById(long id);
 //    void updatePasswordById(String name, String password, long id);
     void deleteById(long id);
-    Optional<User> selectUserByName(String username);
+    Optional<User> selectUserByName(String name);
 
 //    boolean matchesIdAndPassword(String username, String password);
-
-
 }

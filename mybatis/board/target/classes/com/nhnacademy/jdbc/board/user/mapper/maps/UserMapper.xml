@@ -14,9 +14,8 @@
     <select id="selectUserByName" resultType="com.nhnacademy.jdbc.board.user.domain.User">
         select *
         from User
-        where username = '${username}'
+        where username =#{name}
     </select>
-
 
     <select id="selectUsers" resultType="com.nhnacademy.jdbc.board.user.domain.User">
         select *

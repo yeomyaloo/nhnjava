@@ -4,6 +4,7 @@ package com.nhnacademy.jdbc.board.index.web;
 import com.nhnacademy.jdbc.board.user.exception.UserNotMatchesException;
 import com.nhnacademy.jdbc.board.user.mapper.UserMapper;
 import com.nhnacademy.jdbc.board.user.service.UserService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.util.StringUtils;
@@ -14,6 +15,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+@Slf4j
 @Controller
 public class LoginController {
 
@@ -27,11 +29,23 @@ public class LoginController {
 
     @GetMapping("/login")
     public String login(@CookieValue(value = "SESSION", required = false) String session,
+            @CookieValue(value = "SESSION_ADMIN", required = false)String adminSession,
+            HttpServletRequest request,
             Model model){
-
         if(StringUtils.hasText(session)){
             model.addAttribute("id", session);
-            return "redirect:/home";
+            HttpSession httpSession = request.getSession(true);
+            httpSession.setAttribute("userName", "user");
+            return "redirect:/board";
+
+
+        } else if (StringUtils.hasText(adminSession)) {
+            model.addAttribute("id", session);
+            HttpSession httpSession = request.getSession(true);
+            httpSession.setAttribute("userName", "admin");
+            return "redirect:/board";
+
+
         } else{
             return "login";
         }
@@ -47,11 +61,17 @@ public class LoginController {
         if (userService.matches(id, pwd)){
             HttpSession session = request.getSession(true);
 
-            Cookie cookie = new Cookie("SESSION", session.getId());
-            response.addCookie(cookie);
+            Cookie cookie;
+            if(id.equals("admin")){
+                cookie = new Cookie("SESSION_ADMIN", session.getId());
+            }else {
+                cookie = new Cookie("SESSION", session.getId());
 
+            }
+            response.addCookie(cookie);
+            session.setAttribute("userName",id);
             model.addAttribute("id", session.getId());
-            return "home";
+            return "redirect:/board";
         }
         throw new UserNotMatchesException();
     }

@@ -1,5 +1,6 @@
 package com.nhnacademy.jdbc.board.board.domain;
 
+import com.nhnacademy.jdbc.board.user.domain.User;
 import lombok.Getter;
 
 import java.util.Date;
@@ -17,6 +18,13 @@ public class Board {
     private String writeName;
     private Long writeID;
 
+    public Board(Long boardId, String title, String writeName,Date created_at) {
+        this.boardId = boardId;
+        this.title = title;
+        this.writeName = writeName;
+        this.created_at = created_at;
+    }
+
     public Board(String title, String content, String writeName, Long writeID) {
         this.title = title;
         this.content = content;
@@ -24,13 +32,7 @@ public class Board {
         this.writeID = writeID;
     }
 
-    public Board(String title, String content) {
-        this.title = title;
-        this.content = content;
-    }
-
     // new sql.Date(util.Date().getTime());
-
 
 
 }
