@@ -5,10 +5,22 @@
 
 <mapper namespace="com.nhnacademy.jdbc.board.board.mapper.BoardMapper">
 
-    <select id="selectBoardById" resultType="com.nhnacademy.jdbc.board.board.domain.Board">
+
+    <!--column : 테이블 어트리뷰트명 property : 필드명 -->
+    <resultMap id="boardMap" type="com.nhnacademy.jdbc.board.board.domain.Board">
+        <result column="boardId" property="boardId" javaType="Long"/>
+        <result column="title" property="title" javaType="String"/>
+        <result column="content" property="content" javaType="String"/>
+        <result column="created_at" property="createdAt" javaType="Date"/>
+        <result column="writeName" property="writeName" javaType="String"/>
+        <result column="writeId" property="writeID" javaType="Long"/>
+    </resultMap>
+
+
+    <select id="selectBoardById" resultType="com.nhnacademy.jdbc.board.board.domain.Board" resultMap="boardMap">
         select *
         from Board
-        where id = #{id}
+        where boardId = #{boardId}
     </select>
 
     <select id="selectAllBoard" resultType="com.nhnacademy.jdbc.board.board.domain.Board">
@@ -29,7 +41,7 @@
 
 
     <!--게시물번호, 제목, 작성자, 작성일시-->
-    <select id="selectJoinBoard" resultType="com.nhnacademy.jdbc.board.board.domain.Board">
+    <select id="selectJoinBoard" resultType="com.nhnacademy.jdbc.board.board.domain.Board" >
         select b.boardId, b.title , u.username, b.created_at
         from Board as b
         INNER JOIN User as u on b.writeId = u.id
@@ -37,13 +49,13 @@
 
 
     <delete id="deleteById">
-        delete from Board where id=#{boardId}
+        delete from Board where boardId=#{boardId}
     </delete>
 
     <update id="updateById">
         update Board
         SET title = '${title}', cotent = '${content}', modify_at = CURRENT_TIME
-        where id = #{boardId}
+        where boardId = #{boardId}
     </update>
 
 

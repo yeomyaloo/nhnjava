@@ -8,7 +8,7 @@ import java.util.Optional;
 
 public interface BoardService {
 
-    Optional<Board> getBoard(Long id);
+    Optional<Board> getBoard(Long boardId);
     List<Board> getAllBoard();
     void addBoard(String title, String content, String writeName, Long writeId);
     void deleteUser(Long id);

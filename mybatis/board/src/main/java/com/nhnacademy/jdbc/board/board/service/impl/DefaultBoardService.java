@@ -31,8 +31,8 @@ public class DefaultBoardService implements BoardService {
 
 
     @Override
-    public Optional<Board> getBoard(Long id) {
-        Optional<Board> board = boardMapper.selectBoardById(id);
+    public Optional<Board> getBoard(Long boardId) {
+        Optional<Board> board = boardMapper.selectBoardById(boardId);
 
         if(board.isPresent()){
             return board;

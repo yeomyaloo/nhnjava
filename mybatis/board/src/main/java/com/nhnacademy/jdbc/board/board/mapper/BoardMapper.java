@@ -12,9 +12,9 @@ import java.util.Optional;
 @Mapper
 public interface BoardMapper {
 
-    Optional<Board> selectBoardById(Long id);
+    Optional<Board> selectBoardById(@Param("boardId") Long boardId);
     List<Board> selectAllBoard();
-    void insertBoard(@Param("title") String title,@Param("content") String content, @Param("writeName") String writeName, @Param("writeId") Long writeId);
+    void insertBoard(@Param("title") String title, @Param("content") String content, @Param("writeName") String writeName, @Param("writeId") Long writeId);
 
     void deleteById(Long id);
     void updateById(Long id, Board board);
