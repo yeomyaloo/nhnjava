@@ -27,24 +27,10 @@
         values ('${userName}','${password}', #{created_at})
     </insert>
 
-<!--    <update id="updateNameById">-->
-<!--        update User set userName='${userName}'-->
-<!--        where id = #{id}-->
-<!--    </update>-->
-
-<!--    <update id="updatePasswordById">-->
-<!--        update User set password = '${password}'-->
-<!--        where id = #{id} and userName = '${userName}'-->
-<!--    </update>-->
-
     <delete id="deleteById">
         delete from User where id=#{id}
     </delete>
 
-<!--    <select id="matchesIdAndPassword" resultType="boolean" parameterType="String">-->
-<!--        select *-->
-<!--        from User-->
-<!--        where username = '${username}' and password = '${password}';-->
-<!--    </select>-->
+
 
 </mapper>

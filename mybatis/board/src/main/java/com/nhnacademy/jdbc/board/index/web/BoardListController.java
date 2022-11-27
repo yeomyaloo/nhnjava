@@ -2,6 +2,7 @@ package com.nhnacademy.jdbc.board.index.web;
 
 import com.nhnacademy.jdbc.board.board.domain.Board;
 import com.nhnacademy.jdbc.board.board.domain.CreateRequestBoard;
+import com.nhnacademy.jdbc.board.board.domain.UpdateBoardDTO;
 import com.nhnacademy.jdbc.board.board.exception.BoardNotExistException;
 import com.nhnacademy.jdbc.board.board.exception.BoardNotFoundException;
 import com.nhnacademy.jdbc.board.board.mapper.BoardMapper;
@@ -83,16 +84,40 @@ public class BoardListController {
     @GetMapping("/board/{boardId}")
     public String boardDetailViewController(@PathVariable(value ="boardId" ,required = false)Long boardId,
                                             Model model){
-        Optional<Board> op = boardService.getBoard(boardId);
+        Optional<Board> op = boardService.getBoardInfo(boardId);
 
         if(op.isPresent()){
             Board board = op.get();
             model.addAttribute("board", board);
-            return "boardDetail";
+            log.info("info board getName? " + board.getWriteName());
+
+            return "admin/boardDetail";
+
+        } else if (op.isPresent() && ! op.get().getWriteName().equals("admin")){
+            Board board = op.get();
+            model.addAttribute("board", board);
+
+
+            return "customer/boardDetail";
         }
 
         throw new BoardNotExistException();
     }
+
+    @PostMapping("/modify")
+    public String boardModifyPostController(@PathVariable(value = "boardId", required = false) Long boardId, @ModelAttribute UpdateBoardDTO updateBoardDTO){
+
+        boardService.updateBoard(boardId, updateBoardDTO);
+        return "redirect:/board";
+
+    }
+    @PostMapping("/board/{boardId}/delete")
+    public String boardDeletePostController(@PathVariable(value = "boardId", required = false) Long boardId){
+        boardService.deleteUser(boardId);
+        return "redirect:/board";
+    }
+
+
 
 
     @ExceptionHandler(UserNotFoundException.class)

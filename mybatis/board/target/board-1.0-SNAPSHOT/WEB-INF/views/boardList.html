@@ -24,9 +24,9 @@
         <tbody>
             <tr th:each="list:${boardList}">
                 <td th:text="${list.getBoardId()}"></td>
-                <td><a th:href="@{/board/${boardId}(id=${board.boardId})}"><span th:text="${list.getTitle()}"></span></a></td>
-                <td th:text="${list.getWriteName()}"></td>
-                <td th:text="${list.getCreatedAt().toString()}"></td>
+                <td><a th:href="@{/board/{boardId}(boardId=${list.getBoardId()})}"><span th:text="${list.getTitle()}"></span></a></td>
+                <td><span th:text="${list.getWriteName()}"></span></td>
+                <td><span th:text="${list.getCreatedAt().toString()}"></span></td>
             </tr>
         </tbody>
     </table>

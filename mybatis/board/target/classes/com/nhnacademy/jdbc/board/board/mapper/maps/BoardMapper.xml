@@ -12,8 +12,15 @@
         <result column="title" property="title" javaType="String"/>
         <result column="content" property="content" javaType="String"/>
         <result column="created_at" property="createdAt" javaType="Date"/>
-        <result column="writeName" property="writeName" javaType="String"/>
-        <result column="writeId" property="writeID" javaType="Long"/>
+        <association
+                column="username"
+                property="writeName"
+                javaType="com.nhnacademy.jdbc.board.user.domain.User"
+                select="selectUserByName"/>
+
+        <association column="id" property="writeId"
+                     javaType="com.nhnacademy.jdbc.board.user.domain.User"
+                     select="selectUser"/>
     </resultMap>
 
 
@@ -28,11 +35,18 @@
         from Board
     </select>
 
-<!--    <insert id="insertBoard">-->
-<!--        insert into Board(title, content, writeName, writeId)-->
-<!--        values ('${title}','${content}', '${writeName}', '${writeId}')-->
-<!--    </insert>-->
-<!--    -->
+    <select id="selectUser" resultType="com.nhnacademy.jdbc.board.user.domain.User" resultMap="boardMap">
+        select *
+        from User
+        where id = #{userId}
+    </select>
+
+    <select id="selectUserByName" resultType="com.nhnacademy.jdbc.board.user.domain.User" resultMap="boardMap">
+        select *
+        from User
+        where username = #{name}
+    </select>
+
     <insert id="insertBoard" parameterType="com.nhnacademy.jdbc.board.board.domain.Board">
         insert into Board(title, content, writeName, writeId)
         values (#{title}, #{content}, #{writeName}, #{writeId})
@@ -45,7 +59,9 @@
         select b.boardId, b.title , u.username, b.created_at
         from Board as b
         INNER JOIN User as u on b.writeId = u.id
+        where b.boardId = #{boardId}
     </select>
+
 
 
     <delete id="deleteById">

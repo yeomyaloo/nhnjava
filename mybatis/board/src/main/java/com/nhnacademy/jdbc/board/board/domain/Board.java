@@ -3,12 +3,14 @@ package com.nhnacademy.jdbc.board.board.domain;
 import com.nhnacademy.jdbc.board.user.domain.User;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import java.util.Date;
 
 
 
 @Getter
+@ToString
 @NoArgsConstructor
 public class Board {
 
@@ -19,7 +21,9 @@ public class Board {
     private int visitCnt;
     private String writeName;
     private String modifyName;
-    private Long writeID;
+    private Long writeId;
+
+
 
     public Board(Long boardId, String title, String writeName,Date createdAt) {
         this.boardId = boardId;
@@ -28,11 +32,12 @@ public class Board {
         this.createdAt = createdAt;
     }
 
-    public Board(String title, String content, String writeName, Long writeID) {
+    public Board(String title, String content, String writeName, Long writeId, Date createdAt) {
         this.title = title;
         this.content = content;
         this.writeName = writeName;
-        this.writeID = writeID;
+        this.writeId = writeId;
+        this.createdAt = createdAt;
     }
 
     // new sql.Date(util.Date().getTime());

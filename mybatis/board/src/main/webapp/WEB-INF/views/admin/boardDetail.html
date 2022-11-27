@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .title{
+            width: 800px;
+            height: 30px;
+        }
+
+        .content{
+            width: 800px;
+            height: 500px;
+        }
+    </style>
+
+</head>
+<body>
+<form method="post" action="/modify">
+    게시글 제목: <input th:value="${board.title}" type="text" name="title" class="title"></br>
+    게시글 본문: <input th:value="${board.content}" type="text" name="content" class="content"></br>
+    <button type="submit">게시글 수정하기</button>
+</form>
+<form method="post" action="/board/{boardId}/delete">
+    <button type="submit">게시글 삭제하기</button>
+</form>
+
+
+<div th:if="${userNotFoundException}"> 게시글 작성을 위해서는 로그인이 필요합니다.</br><a href="/login">로그인하러 가기</div>
+
+
+</body>
+</html>
