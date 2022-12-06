@@ -1,0 +1,26 @@
+POST localhost:8080/residents/10/relationship
+Content-Type: application/json
+
+{
+    "familyResidentSerialNumber": 12,
+    "familyRelationshipCode": "father"
+}
+###
+
+GET localhost:8080/residents/1/relationship
+
+###
+
+
+PUT localhost:8080/residents/10/relationship/11
+Content-Type: application/json
+
+{
+  "familyRelationshipCode": "mother"
+}
+
+###
+DELETE localhost:8080/residents/10/relationship/11
+Content-Type: application/json
+
+

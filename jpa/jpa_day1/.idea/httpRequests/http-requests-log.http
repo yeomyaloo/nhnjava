@@ -1,0 +1,612 @@
+PUT http://localhost:8080/residents/12/birth/부
+Content-Type: application/json
+
+{
+
+  "phoneNumber": "010-9090-9090",
+  "emailAddress" : "hi@naver.com"
+}
+
+<> 2022-12-04T210847.404.html
+
+###
+
+POST http://localhost:8080/residents/12/birth
+Content-Type: application/json
+
+{
+  "residentSerialNumber": 12,
+  "birthDeathTypeCode": "출생",
+  "reportResidentSerialNumber": "10",
+  "birthDeathReportDate": "1998-11-08",
+  "phoneNumber": "010-9090-9090",
+  "deathReportQualificationsCode": null,
+  "birthReportQualificationsCode": "부",
+  "emailAddress" : null
+}
+
+<> 2022-12-04T200413.200.json
+
+###
+
+POST http://localhost:8080/residents/12/birth
+Content-Type: application/json
+
+{
+  "birthDeathTypeCode": "출생",
+  "reportResidentSerialNumber": "10",
+  "birthDeathReportDate": "1998-11-08",
+  "phoneNumber": "010-9090-9090",
+  "deathReportQualificationsCode": null,
+  "birthReportQualificationsCode": "부",
+  "emailAddress" : null
+}
+
+<> 2022-12-04T200039.400.html
+
+###
+
+POST http://localhost:8080/residents/12/birth
+Content-Type: application/json
+
+{
+  "residentSerialNumber": 12,
+  "birthDeathTypeCode": "출생",
+  "reportResidentSerialNumber": "10",
+  "birthDeathReportDate": "1998-11-08",
+  "phoneNumber": "010-9090-9090",
+  "deathReportQualificationsCode": null,
+  "birthReportQualificationsCode": "부",
+  "emailAddress" : null
+}
+
+<> 2022-12-04T200021.500.html
+
+###
+
+POST http://localhost:8080/residents/12/birth
+Content-Type: application/json
+
+{
+  "residentSerialNumber": 12,
+  "birthDeathTypeCode": "출생",
+  "reportResidentSerialNumber": "10",
+  "birthDeathReportDate": "1998-11-08",
+  "phoneNumber": "010-9090-9090",
+  "deathReportQualificationsCode": null,
+  "birthReportQualificationsCode": "부",
+  "emailAddress" : null
+}
+
+<> 2022-12-04T195454.500.html
+
+###
+
+POST http://localhost:8080/residents/12/birth
+Content-Type: application/json
+
+{
+  "birthDeathTypeCode": "출생",
+  "reportResidentSerialNumber": "10",
+  "birthDeathReportDate": "1998-11-08",
+  "phoneNumber": "010-9090-9090",
+  "deathReportQualificationsCode": null,
+  "birthReportQualificationsCode": "부",
+  "emailAddress" : null
+}
+
+<> 2022-12-04T195447.400.html
+
+###
+
+POST http://localhost:8080/residents/12/birth
+Content-Type: application/json
+
+{
+  "residentSerialNumber": 12,
+  "birthDeathTypeCode": "출생",
+  "reportResidentSerialNumber": "10",
+  "birthDeathReportDate": "1998-11-08",
+  "phoneNumber": "010-9090-9090",
+  "deathReportQualificationsCode": null,
+  "birthReportQualificationsCode": "부",
+  "emailAddress" : null
+}
+
+<> 2022-12-04T195437.500.html
+
+###
+
+POST http://localhost:8080/residents/12/birth
+Content-Type: application/json
+
+{
+  "residentSerialNumber": 12,
+  "birthDeathTypeCode": "출생",
+  "reportResidentSerialNumber": "10",
+  "birthDeathReportDate": "1998-11-08",
+  "phoneNumber": "010-9090-9090",
+  "deathReportQualificationsCode": null,
+  "birthReportQualificationsCode": "부",
+  "emailAddress" : null
+}
+
+<> 2022-12-04T195150.500.html
+
+###
+
+POST http://localhost:8080/residents/12/birth
+Content-Type: application/json
+
+{
+
+  "residentSerialNumber": 12,
+  "birthDeathTypeCode": "출생",
+  "reportResidentSerialNumber": "10",
+  "birthDeathReportDate": "1998-11-08",
+  "phoneNumber": "010-9090-9090",
+  "deathReportQualificationsCode": null,
+  "birthReportQualificationsCode": "부",
+  "emailAddress" : null
+}
+
+<> 2022-12-04T194753.500.html
+
+###
+
+POST http://localhost:8080/residents/12/birth
+Content-Type: application/json
+
+{
+  "birthDeathTypeCode": "출생",
+  "reportResidentSerialNumber": "10",
+  "birthDeathReportDate": "1998-11-08",
+  "phoneNumber": "010-9090-9090",
+  "deathReportQualificationsCode": null,
+  "birthReportQualificationsCode": "부",
+  "emailAddress" : null
+}
+
+<> 2022-12-04T194735.400.html
+
+###
+
+POST http://localhost:8080/residents/12/birth
+Content-Type: application/json
+
+{
+  "birthDeathTypeCode": "출생",
+  "reportResidentSerialNumber": "10",
+  "birthDeathReportDate": "1998-11-08",
+  "phoneNumber": "010-9090-9090",
+  "birthReportQualificationsCode": "부"
+}
+
+<> 2022-12-04T194449.400.html
+
+###
+
+POST http://localhost:8080/residents/12/birth
+Content-Type: application/json
+
+{
+  "birthDeathTypeCode": "출생",
+  "reportResidentSerialNumber": "10",
+  "birthDeathReportDate": "1998-11-08",
+  "phoneNumber": "010-9090-9090",
+  "birthReportQualificationsCode": "부"
+}
+
+<> 2022-12-04T194445.400.html
+
+###
+
+POST http://localhost:8080/residents/12/birth
+Content-Type: application/json
+
+{
+  "birthDeathTypeCode": "출생",
+  "reportResidentSerialNumber": "10",
+  "birthDeathReportDate": "1998-11-08",
+  "phoneNumber": "010-9090-9090",
+  "birthReportQualificationsCode": "부"
+}
+
+<> 2022-12-04T194401.400.html
+
+###
+
+PUT http://localhost:8080/residents/12
+Content-Type: application/json
+
+{
+  "name": "하이",
+  "residentRegistrationNumber": "981108-1232324",
+  "genderCode": "남",
+  "birthDate": "1998-11-08 22:54:00",
+  "birthPlaceCode": "길거리",
+  "registrationBaseAddress": "인천시 계양구"
+}
+
+<> 2022-12-04T194353.200.json
+
+###
+
+POST http://localhost:8080/residents/10/relationship
+Content-Type: application/json
+
+{
+    "familyResidentSerialNumber": 12,
+    "familyRelationshipCode": "father"
+}
+
+<> 2022-12-04T194347.201.json
+
+###
+
+POST http://localhost:8080/residents/12/birth
+Content-Type: application/json
+
+{
+  "birthDeathTypeCode": "출생",
+  "reportResidentSerialNumber": "10",
+  "birthDeathReportDate": "1998-11-08",
+  "phoneNumber": "010-9090-9090",
+  "birthReportQualificationsCode": "부"
+}
+
+<> 2022-12-04T194330.400.html
+
+###
+
+POST http://localhost:8080/residents/12/birth
+Content-Type: application/json
+
+{
+  "birthDeathTypeCode": "출생",
+  "reportResidentSerialNumber": "10",
+  "birthDeathReportDate": "1998-11-08",
+  "phoneNumber": "010-9090-9090",
+  "birthReportQualificationsCode": "부",
+}
+
+<> 2022-12-04T194148.400.html
+
+###
+
+GET http://localhost:8080/residents/1/relationship
+
+<> 2022-12-04T170324.200.json
+
+###
+
+POST http://localhost:8080/residents
+Content-Type: application/json
+
+{
+  "residentSerialNumber": 12,
+  "name": "똥개",
+  "residentRegistrationNumber": "981108-2333333",
+  "genderCode": "여",
+  "birthDate": "1998-11-08 22:54:00",
+  "birthPlaceCode": "병원",
+  "registrationBaseAddress": "주소"
+}
+
+<> 2022-12-04T170104.201.json
+
+###
+
+PUT http://localhost:8080/residents/12
+Content-Type: application/json
+
+{
+  "name": "하이",
+  "residentRegistrationNumber": "981108-1232324",
+  "genderCode": "남",
+  "birthDate": "1998-11-08 22:54:00",
+  "birthPlaceCode": "길거리",
+  "registrationBaseAddress": "인천시 계양구"
+}
+
+<> 2022-12-04T170100.200.json
+
+###
+
+GET http://localhost:8080/residents/1/relationship
+
+<> 2022-12-04T170044.200.json
+
+###
+
+DELETE http://localhost:8080/residents/10/relationship/11
+Content-Type: application/json
+
+<> 2022-12-04T170040.500.html
+
+###
+
+PUT http://localhost:8080/residents/10/relationship/11
+Content-Type: application/json
+
+{
+  "familyRelationshipCode": "mother"
+}
+
+###
+
+PUT http://localhost:8080/residents/10/relationship/11
+Content-Type: application/json
+
+{
+  "familyRelationshipCode": "mother"
+}
+
+###
+
+DELETE http://localhost:8080/residents/10/relationship/11
+Content-Type: application/json
+
+<> 2022-12-04T131650.500.html
+
+###
+
+DELETE http://localhost:8080/residents/10/relationship/11
+Content-Type: application/json
+
+<> 2022-12-04T131201.405.html
+
+###
+
+PUT http://localhost:8080/residents/10/relationship/11
+Content-Type: application/json
+
+{
+  "familyRelationshipCode": "mother"
+}
+
+###
+
+PUT http://localhost:8080/residents/10/relationship/11
+Content-Type: application/json
+
+{
+  "familyRelationshipCode": "mother"
+}
+
+###
+
+PUT http://localhost:8080/residents/10/relationship/11
+Content-Type: application/json
+
+{
+  "familyRelationshipCode": "mother"
+}
+
+###
+
+PUT http://localhost:8080/residents/10/relationship/11
+Content-Type: application/json
+
+{
+  "familyRelationshipCode": "mother"
+}
+
+###
+
+POST http://localhost:8080/residents/10/relationship
+Content-Type: application/json
+
+{
+    "familyResidentSerialNumber": 12,
+    "familyRelationshipCode": "father"
+}
+
+<> 2022-12-02T220407.201.json
+
+###
+
+PUT http://localhost:8080/residents/10/relationship/11
+Content-Type: application/json
+
+{
+  "familyRelationshipCode": "mother"
+}
+
+###
+
+POST http://localhost:8080/residents/10/relationship
+Content-Type: application/json
+
+{
+    "familyResidentSerialNumber": 12,
+    "familyRelationshipCode": "father"
+}
+
+<> 2022-12-02T220334.201.json
+
+###
+
+PUT http://localhost:8080/residents/10/relationship/11
+Content-Type: application/json
+
+{
+  "familyRelationshipCode": "mother"
+}
+
+<> 2022-12-02T215748.200.json
+
+###
+
+PUT http://localhost:8080/residents/10/relationship/11
+Content-Type: application/json
+
+{
+  "familyRelationshipCode": "mother"
+}
+
+<> 2022-12-02T215006.200.json
+
+###
+
+PUT http://localhost:8080/residents/10/relationship/11
+Content-Type: application/json
+
+{
+  "familyRelationshipCode": "mother"
+}
+
+<> 2022-12-02T214954.200.json
+
+###
+
+PUT http://localhost:8080/residents/10/relationship/11
+Content-Type: application/json
+
+{
+  "familyRelationshipCode": "spouse"
+}
+
+<> 2022-12-02T214902.200.json
+
+###
+
+PUT http://localhost:8080/residents/10/relationship/11
+Content-Type: application/json
+
+{
+  "familyRelationshipCode": "mother"
+}
+
+<> 2022-12-02T214607.200.json
+
+###
+
+PUT http://localhost:8080/residents/10/relationship/11
+Content-Type: application/json
+
+{
+  "familyRelationshipCode": "mother"
+}
+
+<> 2022-12-02T214526.200.json
+
+###
+
+PUT http://localhost:8080/residents/10/relationship/11
+Content-Type: application/json
+
+{
+  "familyRelationshipCode": "mother"
+}
+
+<> 2022-12-02T214508.200.json
+
+###
+
+PUT http://localhost:8080/residents/10/relationship/11
+Content-Type: application/json
+
+{
+  "familyRelationshipCode": "mother"
+}
+
+<> 2022-12-02T214507.200.json
+
+###
+
+PUT http://localhost:8080/residents/10/relationship/11
+Content-Type: application/json
+
+{
+  "familyRelationshipCode": "mother"
+}
+
+<> 2022-12-02T214457.404.html
+
+###
+
+PUT http://localhost:8080/residents/10/relationship/11
+Content-Type: application/json
+
+{
+  "familyRelationshipCode": "mother"
+}
+
+<> 2022-12-02T211935.500.html
+
+###
+
+PUT http://localhost:8080/residents/10/relationship/11
+Content-Type: application/json
+
+{
+  "familyRelationshipCode": "mother"
+}
+
+<> 2022-12-02T211319.500.html
+
+###
+
+PUT http://localhost:8080/residents/10/relationship/11
+Content-Type: application/json
+
+{
+  "familyRelationshipCode": "mother"
+}
+
+<> 2022-12-02T210803.500.html
+
+###
+
+PUT http://localhost:8080/residents/10/relationship/11
+Content-Type: application/json
+
+{
+  "familyRelationshipCode": "mother"
+}
+
+<> 2022-12-02T210750.404.html
+
+###
+
+PUT http://localhost:8080/residents/10/relationship/11
+Content-Type: application/json
+
+{
+  "familyRelationshipCode": "mother"
+}
+
+<> 2022-12-02T210543.500.html
+
+###
+
+GET http://localhost:8080/residents/1/relationship
+
+<> 2022-12-02T204924.200.json
+
+###
+
+PUT http://localhost:8080/residents/10/relationship/11
+Content-Type: application/json
+
+{
+  "familyRelationshipCode": "mother"
+}
+
+<> 2022-12-02T204919.500.html
+
+###
+
+POST http://localhost:8080/residents/10/relationship
+Content-Type: application/json
+
+{
+    "familyResidentSerialNumber": 12,
+    "familyRelationshipCode": "father"
+}
+
+<> 2022-12-02T204835.201.json
+
+###
+

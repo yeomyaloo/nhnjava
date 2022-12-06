@@ -1,0 +1,12 @@
+{
+  "residentSerialNumber": 12,
+  "name": "하이",
+  "residentRegistrationNumber": "981108-1232324",
+  "genderCode": "남",
+  "birthDate": 910533240000,
+  "birthPlaceCode": "길거리",
+  "registrationBaseAddress": "인천시 계양구",
+  "deathDate": null,
+  "deathPlaceCode": null,
+  "deathPlaceAddress": null
+}

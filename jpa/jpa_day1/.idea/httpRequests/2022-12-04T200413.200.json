@@ -1,0 +1,10 @@
+{
+  "residentSerialNumber": 12,
+  "birthDeathTypeCode": "출생",
+  "reportResidentSerialNumber": 10,
+  "birthDeathReportDate": 910483200000,
+  "phoneNumber": "010-9090-9090",
+  "deathReportQualificationsCode": null,
+  "birthReportQualificationsCode": "부",
+  "emailAddress": null
+}

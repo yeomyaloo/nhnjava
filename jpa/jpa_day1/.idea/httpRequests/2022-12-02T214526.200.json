@@ -1,0 +1,16 @@
+{
+  "pk": {},
+  "resident": {
+    "residentSerialNumber": 10,
+    "name": "김땡땡",
+    "residentRegistrationNumber": "781111-1111111",
+    "genderCode": "남",
+    "birthDate": 279636180000,
+    "birthPlaceCode": "병원",
+    "registrationBaseAddress": "ㅇㅇ",
+    "deathDate": null,
+    "deathPlaceCode": "NULL",
+    "deathPlaceAddress": "NULL"
+  },
+  "familyRelationshipCode": "자녀"
+}

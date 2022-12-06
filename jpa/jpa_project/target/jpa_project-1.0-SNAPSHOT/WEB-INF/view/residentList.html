@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        table {
+            border-collapse: separate;
+            border-spacing: 0;
+            width: 100%;
+        }
+        th,
+        td {
+            padding: 6px 15px;
+        }
+        th {
+            background: #42444e;
+            color: #fff;
+            text-align: left;
+        }
+        tr:first-child th:first-child {
+            border-top-left-radius: 6px;
+        }
+        tr:first-child th:last-child {
+            border-top-right-radius: 6px;
+        }
+        td {
+            border-right: 1px solid #c6c9cc;
+            border-bottom: 1px solid #c6c9cc;
+        }
+        td:first-child {
+            border-left: 1px solid #c6c9cc;
+        }
+        tr:nth-child(even) td {
+            background: #eaeaed;
+        }
+        tr:last-child td:first-child {
+            border-bottom-left-radius: 6px;
+        }
+        tr:last-child td:last-child {
+            border-bottom-right-radius: 6px;
+        }
+    </style>
+</head>
+<body>
+
+    <table>
+        <thead>
+            <tr>
+                <th>No.</th>
+                <th>성명</th>
+                <th>성별</th>
+                <th>주소</th>
+                <th>가족관계증명서</th>
+                <th>주민등록등본</th>
+                <th>출생신고서</th>
+                <th>사망신고서</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="list : ${residents}">
+                <td th:text="${listStat.count}"></td>
+                <td th:text="${list.name}"></td>
+                <td th:text="${list.genderCode}"></td>
+                <td th:text="${list.registrationBaseAddress}"></td>
+                <td><a th:href="@{/residents/{residentsId}/familyRelationshipReport(residentsId = ${list.residentSerialNumber})}">가족관계증명서</a></td>
+                <td><a th:href="@{/residents/{residentsId}/personInfoReport(residentsId = ${list.residentSerialNumber})}">주민등록등본</a></td>
+                <td><a th:href="@{/residents/{residentsId}/birthReport(residentsId = ${list.residentSerialNumber})}">출생신고서</a></td>
+                <td><a th:href="@{/residents/{residentsId}/deathReport(residentsId = ${list.residentSerialNumber})}">사망신고서</a></td>
+            </tr>
+
+        </tbody>
+    </table>
+
+</body>
+</html>

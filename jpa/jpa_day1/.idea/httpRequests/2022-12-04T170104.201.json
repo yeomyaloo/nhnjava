@@ -1,0 +1,12 @@
+{
+  "residentSerialNumber": 12,
+  "name": "똥개",
+  "residentRegistrationNumber": "981108-2333333",
+  "genderCode": "여",
+  "birthDate": 910533240000,
+  "birthPlaceCode": "병원",
+  "registrationBaseAddress": "주소",
+  "deathDate": null,
+  "deathPlaceCode": null,
+  "deathPlaceAddress": null
+}

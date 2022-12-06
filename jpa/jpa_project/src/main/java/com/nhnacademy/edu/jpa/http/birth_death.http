@@ -1,0 +1,27 @@
+POST localhost:8080/residents/12/birth HTTP/1.1
+Content-Type: application/json
+
+{
+  "residentSerialNumber": 12,
+  "birthDeathTypeCode": "출생",
+  "reportResidentSerialNumber": "10",
+  "birthDeathReportDate": "1998-11-08",
+  "phoneNumber": "010-9090-9090",
+  "deathReportQualificationsCode": null,
+  "birthReportQualificationsCode": "부",
+  "emailAddress" : null
+}
+###
+PUT localhost:8080/residents/12/birth/부 HTTP/1.1
+Content-Type: application/json
+
+{
+
+  "phoneNumber": "010-9090-9090",
+  "emailAddress" : "hi@naver.com"
+}
+
+###
+
+DELETE localhost:8080/residents/12/birth/부 HTTP/1.1
+Content-Type: application/json
