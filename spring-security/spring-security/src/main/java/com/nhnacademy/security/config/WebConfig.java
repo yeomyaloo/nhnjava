@@ -1,7 +1,6 @@
-package com.nhnacademy.edu.springsecurityproject.config;
+package com.nhnacademy.security.config;
 
-
-import com.nhnacademy.edu.springsecurityproject.controller.ControllerBase;
+import com.nhnacademy.security.controller.ControllerBase;
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
@@ -11,10 +10,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
-import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.ViewResolverRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
-import org.thymeleaf.extras.springsecurity5.dialect.SpringSecurityDialect;
 import org.thymeleaf.spring5.SpringTemplateEngine;
 import org.thymeleaf.spring5.templateresolver.SpringResourceTemplateResolver;
 import org.thymeleaf.spring5.view.ThymeleafViewResolver;
@@ -34,17 +31,6 @@ public class WebConfig implements WebMvcConfigurer, ApplicationContextAware, Mes
     @Override
     public void setMessageSource(MessageSource messageSource) {
         this.messageSource = messageSource;
-    }
-
-
-
-    @Override
-    public void addViewControllers(ViewControllerRegistry registry) {
-        registry.addViewController("/").setViewName("index");
-        registry.addRedirectViewController("/redirect-index", "/");
-        registry.addViewController("/auth/login").setViewName("login");
-        registry.addViewController("/auth/logout").setViewName("logout");
-        registry.addViewController("/auth/gitlogin").setViewName("gitLogin");
     }
 
     @Override
@@ -67,7 +53,6 @@ public class WebConfig implements WebMvcConfigurer, ApplicationContextAware, Mes
         SpringTemplateEngine templateEngine = new SpringTemplateEngine();
         templateEngine.setTemplateResolver(templateResolver());
         templateEngine.setTemplateEngineMessageSource(messageSource);
-        templateEngine.addDialect(new SpringSecurityDialect());
 
         return templateEngine;
     }

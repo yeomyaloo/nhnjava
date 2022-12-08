@@ -1,16 +1,24 @@
 package com.nhnacademy.edu.springsecurityproject.config;
 
 
+import com.nhnacademy.edu.springsecurityproject.auth.LoginSuccessHandler;
+import com.nhnacademy.edu.springsecurityproject.service.CustomUserDetailsService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.authentication.AuthenticationProvider;
+import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
+import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
+import org.springframework.web.client.RestTemplate;
 
 @EnableWebSecurity(debug = true)
+@EnableGlobalMethodSecurity(prePostEnabled = true)
 @Configuration
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
@@ -29,11 +37,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .anyRequest().requiresInsecure()
                 .and()
             .formLogin()
-                .usernameParameter("id")
+                .usernameParameter("userId")
                 .passwordParameter("pwd")
+                // 로그인을 위한 path
                 .loginPage("/auth/login")
+                //view template..
                 .loginProcessingUrl("/login")
-                //.successHandler(loginSuccessHandler(null))
+                .successHandler(loginSuccessHandler())
                 .and()
             .logout()
                 .and()
@@ -51,20 +61,29 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .accessDeniedPage("/error/403")
                 .and();
     }
-//
-//    @Override
-//    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-//        auth.authenticationProvider(authenticationProvider(null));
-//    }
 
-//    @Bean
-//    public AuthenticationProvider authenticationProvider(CustomUserDetailsService customUserDetailsService) {
-//        DaoAuthenticationProvider authenticationProvider = new DaoAuthenticationProvider();
-//        authenticationProvider.setUserDetailsService(customUserDetailsService);
-//        authenticationProvider.setPasswordEncoder(passwordEncoder());
-//
-//        return authenticationProvider;
-//    }
+
+    @Bean
+    public AuthenticationSuccessHandler loginSuccessHandler() {
+        return new LoginSuccessHandler();
+
+    }
+
+
+    @Override
+    public void configure(AuthenticationManagerBuilder auth) throws Exception {
+
+        auth.authenticationProvider(authenticationProvider(null));
+    }
+
+    @Bean
+    public AuthenticationProvider authenticationProvider(CustomUserDetailsService customUserDetailsService) {
+        DaoAuthenticationProvider authenticationProvider = new DaoAuthenticationProvider();
+        authenticationProvider.setUserDetailsService(customUserDetailsService);
+        authenticationProvider.setPasswordEncoder(passwordEncoder());
+
+        return authenticationProvider;
+    }
 
     @Bean
     public PasswordEncoder passwordEncoder() {
@@ -72,4 +91,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     }
 
 
+    @Bean
+    public RestTemplate restTemplate(){
+        return new RestTemplate();
+    }
 }
