@@ -20,6 +20,7 @@ public class RootConfig {
 
     @Bean
     public DataSource dataSource() {
+
         BasicDataSource dataSource = new BasicDataSource();
         dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
         dataSource.setUrl("jdbc:mysql://133.186.151.141:3306/nhn_academy_30?serverTimezone=UTC&characterEncoding=UTF-8");

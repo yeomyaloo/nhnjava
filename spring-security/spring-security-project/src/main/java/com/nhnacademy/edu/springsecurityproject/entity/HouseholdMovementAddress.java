@@ -6,12 +6,11 @@ import lombok.*;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.sql.Date;
-
 @Entity
 @Table(name = "household_movement_address")
 @Getter
-@RequiredArgsConstructor
-public class householdMovementAddress {
+@NoArgsConstructor
+public class HouseholdMovementAddress {
 
     @EmbeddedId
     private Pk pk;
@@ -29,14 +28,6 @@ public class householdMovementAddress {
     @JoinColumn(name = "household_serial_number")
     @ManyToOne
     private Household household;
-
-
-    public householdMovementAddress(Pk pk, String houseMovementAddress, char lastAddressYN, Household household) {
-        this.pk = pk;
-        this.houseMovementAddress = houseMovementAddress;
-        this.lastAddressYN = lastAddressYN;
-        this.household = household;
-    }
 
     @Embeddable
     @NoArgsConstructor

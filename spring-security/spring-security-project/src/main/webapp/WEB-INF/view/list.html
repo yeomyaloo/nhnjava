@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <title>list</title>
+</head>
+<body>
+
+<table>
+    <thead>
+    <tr>
+        <th>No</th>
+        <th>성명</th>
+        <th>출생 연/월/일</th>
+        <th>성별</th>
+        <th>주소</th>
+        <th>변경 이유</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="family : ${familyList}">
+        <th><span th:text="${familyStat.count}"/></th>
+        <th><span th:text="${family.getName()}"/></th>
+        <th><span th:text="${family.getResidentRegistrationNumber()}"/></th>
+        <th><span th:text="${family.getGenderCode()}"/></th>
+        <th><span th:text="${family.getRegistrationBaseAddress()}"/></th>
+        <th><span th:text="${family.getHouseholdCompositionChangeReasonCode()}"/></th>
+    </tr>
+
+    </tbody>
+</table>
+</body>
+</html>

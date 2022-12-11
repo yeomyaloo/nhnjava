@@ -7,19 +7,21 @@ import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.oauth2.core.user.OAuth2User;
 
 import javax.persistence.*;
 
 import java.io.Serializable;
 import java.sql.Timestamp;
 import java.util.Collection;
+import java.util.Map;
 
 @Entity
 @Table(name ="resident")
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Resident implements UserDetails {
+public class Resident implements UserDetails, Serializable {
 
     @Id
     @Column(name = "resident_serial_number")
@@ -59,6 +61,8 @@ public class Resident implements UserDetails {
     @Column(name = "password")
     private String pwd;
     private String email;
+
+
 
 
     @Override

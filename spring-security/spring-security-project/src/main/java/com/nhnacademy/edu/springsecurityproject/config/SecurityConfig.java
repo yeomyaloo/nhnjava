@@ -5,15 +5,20 @@ import com.nhnacademy.edu.springsecurityproject.auth.LoginSuccessHandler;
 import com.nhnacademy.edu.springsecurityproject.service.CustomUserDetailsService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.AuthenticationProvider;
+import org.springframework.security.authentication.ProviderManager;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.core.Authentication;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.oauth2.client.authentication.OAuth2AuthorizationCodeAuthenticationProvider;
+import org.springframework.security.oauth2.client.authentication.OAuth2LoginAuthenticationProvider;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 import org.springframework.web.client.RestTemplate;
 
@@ -21,22 +26,21 @@ import org.springframework.web.client.RestTemplate;
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 @Configuration
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
+
+
     @Override
     protected void configure(HttpSecurity http) throws Exception {
+
         http.authorizeRequests()
                 .antMatchers("/admin/**").hasAuthority("ROLE_ADMIN")
-                .antMatchers("/private-project/**").hasAnyAuthority("ROLE_ADMIN", "ROLE_MEMBER")
-                .antMatchers("/project/**").authenticated()
                 .antMatchers("/redirect-index").authenticated()
                 .anyRequest().permitAll()
                 .and()
-            .requiresChannel()
+                .requiresChannel()
                 .antMatchers("/admin/**").requiresSecure()
-                .antMatchers("/private-project/**").requiresSecure()
-                .antMatchers("/project/**").requiresSecure()
                 .anyRequest().requiresInsecure()
                 .and()
-            .formLogin()
+                .formLogin()
                 .usernameParameter("userId")
                 .passwordParameter("pwd")
                 // 로그인을 위한 path
@@ -45,19 +49,19 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .loginProcessingUrl("/login")
                 .successHandler(loginSuccessHandler())
                 .and()
-            .logout()
+                .logout()
                 .and()
-            .csrf()
+                .csrf()
                 .and()
-            .sessionManagement()
+                .sessionManagement()
                 .sessionFixation()
-                    .none()
+                .none()
                 .and()
-            .headers()
+                .headers()
                 .defaultsDisabled()
                 .frameOptions().sameOrigin()
                 .and()
-            .exceptionHandling()
+                .exceptionHandling()
                 .accessDeniedPage("/error/403")
                 .and();
     }
@@ -72,18 +76,20 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     public void configure(AuthenticationManagerBuilder auth) throws Exception {
-
         auth.authenticationProvider(authenticationProvider(null));
     }
+
+
+
 
     @Bean
     public AuthenticationProvider authenticationProvider(CustomUserDetailsService customUserDetailsService) {
         DaoAuthenticationProvider authenticationProvider = new DaoAuthenticationProvider();
         authenticationProvider.setUserDetailsService(customUserDetailsService);
         authenticationProvider.setPasswordEncoder(passwordEncoder());
-
         return authenticationProvider;
     }
+
 
     @Bean
     public PasswordEncoder passwordEncoder() {
@@ -92,7 +98,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 
     @Bean
-    public RestTemplate restTemplate(){
+    public RestTemplate restTemplate() {
         return new RestTemplate();
     }
+
+
 }

@@ -9,6 +9,11 @@
     <a href="/redirect-index">Login</a>
 </div>
 <br />
+
+<div sec:authorize="isAuthenticated()">
+    <a href="/list">가족관계증명서 보러가기</a>
+</div>
+<br />
 <a href="/">Go to Main</a>
 <br />
 <br />

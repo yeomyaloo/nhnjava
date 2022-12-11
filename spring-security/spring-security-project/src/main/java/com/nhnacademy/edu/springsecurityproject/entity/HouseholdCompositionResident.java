@@ -11,7 +11,7 @@ import java.sql.Date;
 @Entity
 @Getter
 @RequiredArgsConstructor
-public class householdCompositionResident {
+public class HouseholdCompositionResident implements Serializable{
 
     @EmbeddedId
     private Pk pk;
@@ -46,6 +46,8 @@ public class householdCompositionResident {
         @Column(name = "resident_serial_number")
         private Integer residentSerialNumber;
 
+
+        //세대주
         @Column(name = "household_serial_number")
         private Integer householdSerialNumber;
 
