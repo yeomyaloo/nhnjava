@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="/login" method="post">
+    ID: <input type="text" name="userId"><br />
+    PASSWORD: <input type="password" name="password"><br />
+    <button type="submit">로그인하기</button>
+</form>
+<br />
+<div th:if="${userNotMatchesException}">잘못된 정보입니다. 다시 로그인 해주세요</div>
+
+</body>
+</html>
