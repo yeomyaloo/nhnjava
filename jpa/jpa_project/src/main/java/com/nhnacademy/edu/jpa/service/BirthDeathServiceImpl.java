@@ -38,7 +38,7 @@ public class BirthDeathServiceImpl implements BirthDeathService {
 
     @Override
     public boolean deleteBirthDeath(Integer num, String code) {
-        if( birthDeathReportResidentRepository.deleteBirthDeathReportResidentPk(num, code);{
+        if( birthDeathReportResidentRepository.deleteBirthDeathReportResidentPk(num, code)){
             return true;
         }
         return false;
